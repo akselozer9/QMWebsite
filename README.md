@@ -11,5 +11,5 @@
 - I used three.js for the 3D components of the website
 
 ## Contact
-- akselozer9@unm.edu
+- aksel@umich.edu or akselozer9@unm.edu, 720-237-1437
 - Please feel free to contact me if you notice any issues or have any relevant suggestions I could add to the website. Enjoy!
