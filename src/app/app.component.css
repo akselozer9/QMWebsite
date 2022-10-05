@@ -1,0 +1,224 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+.navbar {
+  height: 20rem;
+  background-color: rgb(35,31,32)
+}
+
+.navbar-item{
+  height: 20rem;
+  width: 40rem;
+  font-size: 7rem;
+  font-family:'Audiowide';
+  left: 600px;
+
+}
+
+body {
+  font-family: 'Audiowide';
+  text-shadow: 25px 25px 25px white;
+}
+.neon {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+}
+
+@font-face {
+  font-family: Arcade Classic;
+  src: url(fonts/ARCADECLASSIC.TTF);
+}
+
+/* .p {
+  text-align: justify;
+  font-size: 25px;
+  top: 1000px;
+  left: 1000px;
+  z-index: 9999;
+  color: black;
+} */
+.svg{
+  font-size: 0px;
+}
+
+.sec1{
+  z-index: 99999;
+  position: relative;
+  top: 1000px ;
+  left: 1000px ;
+  font-size: 50px;
+  color: black;
+}
+.arrow{
+  z-index: 999;
+  position: absolute;
+  top: 1340px ;
+  left: 670px ;
+  font-size: 200px;
+  color: black;
+}
+
+.fire_message{
+  z-index: 999;
+  position: absolute;
+  top: 1420px ;
+  left: 170px ;
+  font-size: 100px;
+  color: rgb(0, 255, 255);
+  text-shadow: none;
+  font-family: Arcade Classic;
+}
+
+
+
+
+
+
+.square_vec{
+  z-index: 999;
+  position: absolute;
+  top: 3500px ;
+  left: 100px ;
+  font-size: 200px;
+  color: black;
+}
+
+.square_vec1{
+  z-index: 999;
+  position: absolute;
+  top: 3500px ;
+  left: 2900px ;
+  font-size: 200px;
+  color: black;
+}
+
+.square_vec2{
+  z-index: 999;
+  position: absolute;
+  top: 4500px ;
+  left: 3200px ;
+  font-size: 200px;
+  color: black;
+}
+
+.square_vec3{
+  z-index: 999;
+  position: absolute;
+  top: 4300px ;
+  left: 200px ;
+  font-size: 200px;
+  color: black;
+}
+.square_vec4{
+  z-index: 999;
+  position: absolute;
+  top: 4800px ;
+  left: 200px ;
+  font-size: 200px;
+  color: black;
+}
+.square_vec5{
+  z-index: 999;
+  position: absolute;
+  top: 4850px ;
+  left: 1000px ;
+  font-size: 200px;
+  color: black;
+}
+.square_vec6{
+  z-index: 999;
+  position: absolute;
+  top: 4800px ;
+  left: 200px ;
+  font-size: 200px;
+  color: black;
+}
+
+
+
+
+.info_intro{
+  z-index: 999;
+  position: absolute;
+  top: 350px ;
+  left: 100px ;
+  font-size: 100px;
+  color: black;
+  text-shadow: none;
+  font-family: Arcade Classic;
+}
+.info_intro2{
+  z-index: 999;
+  position: absolute;
+  top: 2500px ;
+  left: 100px ;
+  font-size: 100px;
+  color: black;
+  text-shadow: none;
+  font-family: Arcade Classic;
+}
+.info_intro3{
+  z-index: 999;
+  position: absolute;
+  top:3900px ;
+  left: 100px ;
+  font-size: 100px;
+  color: black;
+  text-shadow: none;
+  font-family: Arcade Classic;
+}
+
+
+
+
+.sec3{
+  z-index: 9999;
+  position: relative;
+  top: 990px ;
+  left: 1000px ;
+  font-size: 50px;
+  color: black;
+}
+
+.github{
+  z-index: 999;
+  position: absolute;
+  left: 4250px ;
+  top: -40px ;
+  height:250px;
+  left: 4950px ;
+  font-size: 100px;
+  color: black;
+  text-shadow: none;
+  font-family: Arcade Classic;
+}
+.catlogo{
+    z-index: 999;
+    position: absolute;
+    left: 60px ;
+    top: 20px ;
+    font-size: 200px;
+    color: black;
+  }
+/* a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: black;
+  width: 250px;
+  height:250px;
+  left: 4250px ;
+  top: 20px ;
+} */
+
+  a { position: relative; z-index: 1; }
+a span { display: inline-block; }
+a object { position: relative; z-index: -1; }

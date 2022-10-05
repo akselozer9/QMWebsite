@@ -1,0 +1,11 @@
+Model Information:
+* title:	GART130 Sci-Fi Crate
+* source:	https://sketchfab.com/3d-models/gart130-sci-fi-crate-2b06756fadb64b9993bb1b5eca9d5651
+* author:	D. B. (https://sketchfab.com/balidom)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "GART130 Sci-Fi Crate" (https://sketchfab.com/3d-models/gart130-sci-fi-crate-2b06756fadb64b9993bb1b5eca9d5651) by D. B. (https://sketchfab.com/balidom) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
