@@ -17,6 +17,7 @@
 
 - This website was deployed with the Angular CLI framework
 - I used three.js for the 3D components of the website
+- Main driver written in typescript
 
 ## Contact
 - aksel@umich.edu or akselozer9@unm.edu, 720-237-1437
