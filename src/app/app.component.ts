@@ -42,8 +42,8 @@ var softsa = 0;
 
 //camera
 const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(30,width/ length, 1, 1500)
-camera.position.set(-50, 50, 150)
-camera.lookAt(0,0,0)
+camera.position.set(-70, 60, 150)
+camera.lookAt(0,0,40)
 
 
 
@@ -303,7 +303,7 @@ fontLoaders.load("./assets/Lacona Demo_Regular (1).json", (font) => {
 const textGeometry = new TextGeometry('Red Electrons', {
 font,
 size: 4,
-height: .01,
+height: .001,
 });
 const textMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
 soft_words.geometry =  textGeometry;
@@ -984,8 +984,8 @@ export function animate(){
 
 const container = document.createElement('ex1');
 container.style.position = 'relative';
-container.style.left = '1800px';
-container.style.top = '-6400px'
+container.style.left = '2000px';
+container.style.top = '-10000px'
 container.style.width = "700px";
 container.style.height = "700px";
 container.style.display = "flex";
@@ -1078,7 +1078,7 @@ var softsa2 = 0;
 
 //camera
 const camera2: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(30,width2/ length2, 1, 1500)
-camera2.position.set(-50, 500, 150)
+camera2.position.set(-50, 50, 150)
 camera2.lookAt(0,0,0)
 
 
@@ -1254,7 +1254,7 @@ fontLoader.load("./assets/Digital-7_Regular.json", (font) => {
 const textGeometry = new TextGeometry(hards.toString(), {
 font,
 size: 4,
-height: 2,
+height: .01,
 });
 const textMaterial = new THREE.MeshBasicMaterial({color: 0x0000FF});
 text_hard2.geometry =  textGeometry;
@@ -1269,7 +1269,7 @@ fontLoaderh2.load("./assets/Lacona Demo_Regular (1).json", (font) => {
 const textGeometry = new TextGeometry('Blue Electrons', {
 font,
 size: 4,
-height: .01,
+height: .001,
 });
 const textMaterial = new THREE.MeshBasicMaterial({color: 0x0000FF});
 hard_words2.geometry =  textGeometry;
@@ -1285,7 +1285,7 @@ fontLoaderPercHard.load("./assets/Digital-7_Regular.json", (font) => {
 const textGeometry = new TextGeometry(percent.toString() + '%', {
 font,
 size: 4,
-height: 2
+height: .01
 });
 const textMaterial = new THREE.MeshBasicMaterial({color: 0x0000FF});
 perc_hard2.geometry =  textGeometry;
@@ -1303,7 +1303,7 @@ fontLoader.load("./assets/Digital-7_Regular.json", (font) => {
 const textGeometry = new TextGeometry(softs.toString(), {
 font,
 size: 4,
-height: 2
+height: .01
 });
 const textMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
 text_soft2.geometry =  textGeometry;
@@ -1344,7 +1344,7 @@ fontLoaders2.load("./assets/Lacona Demo_Regular (1).json", (font) => {
 const textGeometry = new TextGeometry('Red Electrons', {
 font,
 size: 4,
-height: .01,
+height: .001,
 });
 const textMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
 soft_words2.geometry =  textGeometry;
@@ -1360,7 +1360,7 @@ fontLoaderPercSoft.load("./assets/Digital-7_Regular.json", (font) => {
 const textGeometry = new TextGeometry(percent.toString() + '%', {
 font,
 size: 4,
-height: 2
+height: .01
 });
 const textMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
 perc_soft2.geometry =  textGeometry;
@@ -1566,8 +1566,19 @@ const diamonds2: THREE.Mesh[] = []
 
 
 function createSoftElectron2() {
+
+  const geometry = new THREE.BoxGeometry( 2.5, 2.5, 2.5 );
+const material = new THREE.MeshPhongMaterial( {color: 0x000000} );
+const cube2 = new THREE.Mesh( geometry, material );
+cube2.position.set(4,10,0);
+cube2.castShadow = true;
+cube2.receiveShadow = true;
+scene2.add(cube2);
+cube2.visible = false;
+cubes2.push(cube2);
   //let truthy = true;
   let x = Math.random()
+  let y = Math.random()
   const front = Math.tan(Math.PI / 6)
   const back = Math.cos(Math.PI / 6)
   const vertices2 = [
@@ -1609,6 +1620,10 @@ softobjects2.push(sphere2);
 scene2.add(sphere2);
 
  var start = {x: -60, y: .2, z: 42 };
+ var dead_end1 = { x: -44, y: .2, z: 42 };
+ var dead_endk = { x: -44, y: .2, z: 42 };
+ var dead_end2 = { x: -44, y: .2, z: -42 };
+ var dead_end3 = { x: 0, y: .2, z: -42 };
  var target1 = { x: -42, y: .2, z: 42 };
  var target2 = { x: 42, y: .2, z: 42 };
  var target3 = { x: 42, y: .2, z: -42 };
@@ -1634,18 +1649,36 @@ var tar_x =  { x: 43, y: .2, z: -42 };
    meshkk2.position.y = object.y;
    meshkk2.position.z = object.z;
 
+   cube2.position.x = object.x;
+   cube2.position.y = object.y;
+   cube2.position.z = object.z;
+
+   if(sphere2.position.x == -44 && sphere2.position.z == 42){
+    sphere2.visible = false;
+    meshkk2.visible = false;
+    cube2.visible = true;
+  }
+
+
+  if(sphere2.position.x == 0 && sphere2.position.z == -42){
+    scene2.remove(sphere2);
+    scene2.remove(meshkk2);
+    scene2.remove(cube2);
+  }
 
     if(sphere2.position.z == 42 && sphere2.position.x == -42){
-      // sphere2.material.color.setHex(0x0000ff);
       sphere2.visible = false;
+      cube2.visible = false;
       meshkk2.visible = true;
     }
+
 
 
    if(sphere2.position.z == -42 && sphere2.position.x == 42){
     sphere2.visible = false;
     meshkk2.visible = true;
   }
+
 
   if(sphere2.position.z == -42 && sphere2.position.x == 43 ){
     ++softsa2;
@@ -1688,14 +1721,28 @@ var tar_x =  { x: 43, y: .2, z: -42 };
   if(sphere2.position.z == -200){
     scene2.remove(sphere2);
     scene2.remove(meshkk2);
+    scene2.remove(cube2);
   }
   if(sphere2.position.x == 200){
     scene2.remove(sphere2);
     scene2.remove(meshkk2);
+    scene2.remove(cube2);
   }
 
  }
+if(y <= 0.5){
+  var tween1 = new TWEEN.Tween(start).to(dead_end1, 2000)
+  var tween2 = new TWEEN.Tween(start).to(dead_end2, 2000)
+  var tween3 = new TWEEN.Tween(start).to(dead_end3, 2000)
 
+  tween1.chain(tween2).start()
+  tween2.chain(tween3)
+
+  tween1.onUpdate(updateFunc)
+  tween2.onUpdate(updateFunc)
+  tween3.onUpdate(updateFunc)
+}
+else{
  var decision1;
  var decision2;
  var tween1 = new TWEEN.Tween(start).to(target1, 2000)
@@ -1720,6 +1767,7 @@ var tar_x =  { x: 43, y: .2, z: -42 };
  tween3.onUpdate(updateFunc)
  decision1.onUpdate(updateFunc)
  decision2.onUpdate(updateFunc)
+}
 }
 
 
@@ -1890,8 +1938,8 @@ export function animate2(){
 
 const container2 = document.createElement('ex1');
 container2.style.position = 'relative';
-container2.style.left = '700px';
-container2.style.top = '-3200px'
+container2.style.left = '500px';
+container2.style.top = '-7000px'
 container2.style.width = "700px";
 container2.style.height = "700px";
 container2.style.display = "flex";
@@ -1902,8 +1950,8 @@ container2.addEventListener('click', event => {
 
   let x = Math.random()
   let x2 = Math.random()
-  clickMouse2.x = (event.clientX / window.innerWidth) * 2 - 1;
-  clickMouse2.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  clickMouse2.x = ((event.clientX-container2.getBoundingClientRect().left) / window.innerWidth) * 2 - 1;
+  clickMouse2.y = -((event.clientY-container2.getBoundingClientRect().top) / window.innerHeight) * 2 + 1;
   const found = intersect2(clickMouse2);
   if (found.length > 0) {
         createSoftElectron2();
@@ -1976,8 +2024,8 @@ var softsa3 = 0;
 
 //camera
 const camera3: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(30,width3/ length3, 1, 1500)
-camera3.position.set(-50, 0, 350)
-camera3.lookAt(0,0,0)
+camera3.position.set(-130, 40, 340)
+camera3.lookAt(0,50,70)
 // camera.position.set(-50, 50, 150)
 // camera.lookAt(0,0,0)
 
@@ -2060,7 +2108,7 @@ fontLoader.load("./assets/Lacona Demo_Regular (1).json", (font) => {
 const textGeometry = new TextGeometry(hards.toString(), {
 font,
 size: 4,
-height: 2,
+height: .01,
 });
 const textMaterial = new THREE.MeshBasicMaterial({color: 0x0000FF});
 text_hard3.geometry =  textGeometry;
@@ -2077,7 +2125,7 @@ fontLoaderPercHard.load("./assets/Lacona Demo_Regular (1).json", (font) => {
 const textGeometry = new TextGeometry(percent.toString() + '%', {
 font,
 size: 4,
-height: 2
+height: .01
 });
 const textMaterial = new THREE.MeshBasicMaterial({color: 0x0000FF});
 perc_hard3.geometry =  textGeometry;
@@ -2095,7 +2143,7 @@ fontLoader3.load("./assets/Lacona Demo_Regular (1).json", (font) => {
 const textGeometry = new TextGeometry(softs.toString(), {
 font,
 size: 4,
-height: 2
+height: .01
 });
 const textMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
 text_soft3.geometry =  textGeometry;
@@ -3804,8 +3852,8 @@ if(sphere1.position.x == 150.8-20 && sphere1.position.y == 0+30 && sphere1.posit
 
  if(x3 <= 0.5){
   console.log("min 4prob")
-  a = new TWEEN.Tween(start).to(target4_min, 10)
-  dec1 = new TWEEN.Tween(start).to(target4, 4000)
+  a = new TWEEN.Tween(start).to(target4_min, 1)
+  dec1 = new TWEEN.Tween(start).to(target4, 1000)
 
               if(x4 <= 0.5){
                 dec2 = new TWEEN.Tween(start).to(target4_up, 2000)
@@ -3987,7 +4035,7 @@ export function animate3(){
 const container3 = document.createElement('ex3');
  container3.style.position = 'relative';
  container3.style.left = '1500px';
- container3.style.top = '-12280px'
+ container3.style.top = '-16280px'
 container3.style.width = "700px";
 container3.style.height = "700px";
 container3.style.display = "flex";

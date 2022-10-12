@@ -111,7 +111,7 @@ body {
 .square_vec3{
   z-index: 999;
   position: absolute;
-  top: 4300px ;
+  top: 4600px ;
   left: 200px ;
   font-size: 200px;
   color: black;
@@ -119,7 +119,7 @@ body {
 .square_vec4{
   z-index: 999;
   position: absolute;
-  top: 4800px ;
+  top: 5000px ;
   left: 200px ;
   font-size: 200px;
   color: black;
@@ -127,18 +127,43 @@ body {
 .square_vec5{
   z-index: 999;
   position: absolute;
-  top: 4850px ;
-  left: 1000px ;
+  top: 5100px ;
+  left: 970px ;
   font-size: 200px;
   color: black;
 }
 .square_vec6{
   z-index: 999;
   position: absolute;
-  top: 4800px ;
-  left: 200px ;
+  top: 4700px ;
+  left: 970px ;
   font-size: 200px;
   color: black;
+}
+
+.square_vec7{
+  z-index: 999;
+  position: absolute;
+  top: 4650px ;
+  left: 2200px ;
+  font-size: 200px;
+  color: black;
+}
+.square_vec8{
+  z-index: 999;
+  position: absolute;
+  top: 5050px ;
+  left: 2200px ;
+  font-size: 200px;
+  color: black;
+}
+.square_vec9{
+  z-index: 99;
+  position: absolute;
+  top: 13100px ;
+  left: -680px ;
+  width: 1000px;
+  height:  1000px;
 }
 
 
@@ -175,6 +200,20 @@ body {
   font-family: Arcade Classic;
 }
 
+.info_intro4{
+  z-index: 999;
+  position: absolute;
+  top:8000px ;
+  left: 1600px ;
+  font-size: 100px;
+  color: black;
+  text-shadow: none;
+  font-family: Arcade Classic;
+}
+
+
+
+
 
 
 
@@ -199,6 +238,67 @@ body {
   text-shadow: none;
   font-family: Arcade Classic;
 }
+
+.youtube{
+  z-index: 999;
+  position: absolute;
+  left: 2050px ;
+  top: 16950px ;
+  height:250px;
+
+  font-size: 100px;
+  color: black;
+  text-shadow: none;
+  font-family: Arcade Classic;
+}
+.resources{
+  z-index: 999;
+  position: absolute;
+  left: 2050px ;
+  top: 16550px ;
+  font-size: 300px;
+  color: green;
+  text-shadow: none;
+  font-family: Arcade Classic;
+}
+
+.discussion{
+  z-index: 999;
+  position: absolute;
+  left: 1300px ;
+  top: 12000px ;
+  font-size: 300px;
+  color: green;
+  text-shadow: none;
+  font-family: Arcade Classic;
+}
+
+.conclusion{
+  z-index: 999;
+  position: absolute;
+  left: 100px ;
+  top: 12800px ;
+  font-size: 100px;
+  color: black;
+  text-shadow: none;
+  font-family: Arcade Classic;
+}
+
+.textbook{
+  z-index: 999;
+  position: absolute;
+  left: 1000px ;
+  top: 16950px ;
+  height:250px;
+
+  font-size: 100px;
+  color: black;
+  text-shadow: none;
+  font-family: Arcade Classic;
+}
+
+
+
 .catlogo{
     z-index: 999;
     position: absolute;
