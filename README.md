@@ -1,27 +1,26 @@
-# Ang12
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+# The website is intended as instructional material for introduction quantum mechanics courses that cover the color-hardness box experiments.
+## The website url : https://akselozer9.github.io/QMWebsite/
 
-## Development server
+### It contains 3d versions of the experiments where students can fire the electrons themselves and look at the results.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Exp1
+<img width="1422" alt="Screen Shot 2022-10-05 at 2 22 15 PM" src="https://user-images.githubusercontent.com/109047406/194156279-5657e8cf-39c5-4b43-8fc3-bd18764c9ee0.png">
 
-## Code scaffolding
+### Exp2
+<img width="948" alt="Screen Shot 2022-10-05 at 2 41 52 PM" src="https://user-images.githubusercontent.com/109047406/194159419-9a7d59fd-6713-4c48-b2a1-44e26f7dbe75.png">
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Ex3
+<img width="1181" alt="Screen Shot 2022-10-05 at 2 44 01 PM" src="https://user-images.githubusercontent.com/109047406/194159738-52d02280-c808-4de6-a07b-62b01dacfe93.png">
 
-## Build
+## Tools used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- This website was deployed with the Angular CLI framework
+- I used three.js for the 3D components of the website
+- Main driver written in typescript
 
-## Running unit tests
+## Contact
+- aksel@umich.edu or akselozer9@unm.edu, 720-237-1437
+- Please feel free to contact me if you notice any issues or have any relevant suggestions I could add to the website. Enjoy!
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
