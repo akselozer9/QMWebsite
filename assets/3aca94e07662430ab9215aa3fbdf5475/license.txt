@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cube内结构
+* source:	https://sketchfab.com/3d-models/cube-3aca94e07662430ab9215aa3fbdf5475
+* author:	战神3 (https://sketchfab.com/848428287)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cube内结构" (https://sketchfab.com/3d-models/cube-3aca94e07662430ab9215aa3fbdf5475) by 战神3 (https://sketchfab.com/848428287) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

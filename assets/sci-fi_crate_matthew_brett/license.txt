@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sci-Fi Crate Matthew Brett
+* source:	https://sketchfab.com/3d-models/sci-fi-crate-matthew-brett-8fe167ca11764ea8b854867d5df3b68c
+* author:	MattBrett (https://sketchfab.com/MattBrett)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sci-Fi Crate Matthew Brett" (https://sketchfab.com/3d-models/sci-fi-crate-matthew-brett-8fe167ca11764ea8b854867d5df3b68c) by MattBrett (https://sketchfab.com/MattBrett) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

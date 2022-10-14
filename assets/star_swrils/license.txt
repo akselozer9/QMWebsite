@@ -1,0 +1,11 @@
+Model Information:
+* title:	Star Swrils
+* source:	https://sketchfab.com/3d-models/star-swrils-90de0da37b524e498aa9ea119d929840
+* author:	Tycho Magnetic Anomaly (https://sketchfab.com/Tycho_Magnetic_Anomaly)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Star Swrils" (https://sketchfab.com/3d-models/star-swrils-90de0da37b524e498aa9ea119d929840) by Tycho Magnetic Anomaly (https://sketchfab.com/Tycho_Magnetic_Anomaly) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
