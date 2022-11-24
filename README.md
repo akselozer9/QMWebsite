@@ -1,4 +1,4 @@
-## Video
+## Experiment 1
 
 https://user-images.githubusercontent.com/109047406/203872734-6afc344b-2211-40fa-b9a0-91dba9b52c1e.mov
 # The website is intended as instructional material for introduction quantum mechanics courses that cover the color-hardness box experiments.
