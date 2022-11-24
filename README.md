@@ -16,7 +16,7 @@ dependencies
 
 - npm install -g @angular/cli
 - npm install three.js
-- npm i tween.js
+- npm install tween.js
 - ng build
 - ng serve
 
