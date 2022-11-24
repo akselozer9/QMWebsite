@@ -1,4 +1,4 @@
-# This website is intended as instructional material for introduction quantum mechanics courses that cover the color-hardness box experiments.
+# This website is intended as instructional material for introduction quantum mechanics courses that cover the color-hardness box experiments. Videos of website below ->
 It contains 3d versions of the experiments where students can fire the electrons themselves and look at the results.
 
 ### Experiment 1
