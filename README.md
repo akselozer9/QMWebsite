@@ -7,7 +7,7 @@ https://user-images.githubusercontent.com/109047406/203872734-6afc344b-2211-40fa
 ### Experiment 2
 https://user-images.githubusercontent.com/109047406/203874434-ab769e82-004b-4a14-95aa-c61733b77103.mov
 
-### Experiment 3
+### Experiment 3 (identical setup as exp#2 accept a wall in placed along the cube path)
 https://user-images.githubusercontent.com/109047406/203875188-80ffe43b-b289-4254-8e92-507f67e543c3.mov
 
 ## Command to Deploy website on localhost:
