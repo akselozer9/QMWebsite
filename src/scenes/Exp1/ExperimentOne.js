@@ -1,3 +1,6 @@
+
+ 
+
 import React, { Component, useEffect, useTheme, useState } from "react";
 import * as THREE from "three";
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
@@ -53,32 +56,32 @@ class ExperimentOne extends Component {
 
     //the code im copy pasting begin
 
-    const light303 = new THREE.DirectionalLight(0xfff0dd, .2);
-    light303.position.set(0, 5, 10);
-    light303.castShadow = true;
-    scene3.add(light303);
+    const Light1 = new THREE.DirectionalLight(0xfff0dd, .2);
+    Light1.position.set(0, 5, 10);
+    Light1.castShadow = true;
+    scene3.add(Light1);
     
-    const lightk303 = new THREE.DirectionalLight(0x6a0dad, 1);
-    lightk303.position.set(-40.5, 8, 40.5);
-    lightk303.castShadow = true;
-    scene3.add(lightk303);
+    const Light2 = new THREE.DirectionalLight(0x6a0dad, 1);
+    Light2.position.set(-40.5, 8, 40.5);
+    Light2.castShadow = true;
+    scene3.add(Light2);
     
     // ambient light
-    let hemiLight303 = new THREE.AmbientLight(0xffffff, 0.20);
-    hemiLight303.castShadow = true;
-    scene3.add(hemiLight303);
+    let HemLight1 = new THREE.AmbientLight(0xffffff, 0.20);
+    HemLight1.castShadow = true;
+    scene3.add(HemLight1);
     
     //Add directional light
-    let dirLight303 = new THREE.DirectionalLight(0xffffff, .5);
-    dirLight303.position.set(-30, 50, -30);
-    scene3.add(dirLight303);
-    dirLight303.castShadow = true;
-    dirLight303.shadow.mapSize.width = 2048;
-    dirLight303.shadow.mapSize.height = 2048;
-    dirLight303.shadow.camera.left = -70;
-    dirLight303.shadow.camera.right = 70;
-    dirLight303.shadow.camera.top = 70;
-    dirLight303.shadow.camera.bottom = -70;
+    let DirLight1 = new THREE.DirectionalLight(0xffffff, .5);
+    DirLight1.position.set(-30, 50, -30);
+    scene3.add(DirLight1);
+    DirLight1.castShadow = true;
+    DirLight1.shadow.mapSize.width = 2048;
+    DirLight1.shadow.mapSize.height = 2048;
+    DirLight1.shadow.camera.left = -70;
+    DirLight1.shadow.camera.right = 70;
+    DirLight1.shadow.camera.top = 70;
+    DirLight1.shadow.camera.bottom = -70;
     
     
     function hard_percent3(hards, softs){
@@ -151,18 +154,7 @@ function LoadFont_Soft3(softs){
   }
 
 
-  const light2303 = new THREE.DirectionalLight(0xff0000, 1);
-  light2303.position.set(25, 5, 125);
-  //scene.add(light2);
-  const light3303 = new THREE.DirectionalLight(0xFFFF00, 1);
-  light3303.position.set(-25, 5, -125);
-  //scene.add(light3);
-  const light4303 = new THREE.DirectionalLight(0x0000FF, 1);
-  light2303.position.set(-25, 5, 125);
-  scene3.add(light4303);
-  //const light5 = new THREE.DirectionalLight(0x0000FF, 1);
-  light3303.position.set(25, 5, -125);
-  //scene.add(light5);
+
   
   const raycaster303 = new THREE.Raycaster(); // create once
   const clickMouse303 = new THREE.Vector2();  // create once
@@ -174,34 +166,34 @@ function LoadFont_Soft3(softs){
    return raycaster303.intersectObjects(scene3.children,true);
   }
 
-  const gglftLoaderb3 = new GLTFLoader();
-  gglftLoaderb3.load("/scenegold.gltf", (gltfScene) => {
+  const loaderGold1 = new GLTFLoader();
+  loaderGold1.load("/scenegold.gltf", (gltfScene) => {
   scene3.add(gltfScene.scene);
   gltfScene.scene.scale.set(25,25,26);
   gltfScene.scene.position.set(-79.2-20,-15+30,40.2);
   });
-  const gglftLoaderr3 = new GLTFLoader();
-  gglftLoaderr3.load("/scenegold.gltf", (gltfScene) => {
+  const loaderGold2 = new GLTFLoader();
+  loaderGold2.load("/scenegold.gltf", (gltfScene) => {
   scene3.add(gltfScene.scene);
   gltfScene.scene.scale.set(25,25,26);
   gltfScene.scene.position.set(-81.2-20,-15+30,40.2);
   });
-  const gglftLoaderbkx3 = new GLTFLoader();
-  gglftLoaderbkx3.load("/sceneblack.gltf", (gltfScene) => {
+  const loaderBlack1 = new GLTFLoader();
+  loaderBlack1.load("/sceneblack.gltf", (gltfScene) => {
   scene3.add(gltfScene.scene);
   gltfScene.scene.scale.set(25,25,26);
   gltfScene.scene.position.set(-80.2-20,-14.8+30,41.2);
   });
-  const gglftLoaderrpx3 = new GLTFLoader();
-  gglftLoaderrpx3.load("/sceneblack.gltf", (gltfScene) => {
+  const loaderBlack2 = new GLTFLoader();
+  loaderBlack2.load("/sceneblack.gltf", (gltfScene) => {
   scene3.add(gltfScene.scene);
   gltfScene.scene.scale.set(25,25,26);
   gltfScene.scene.position.set(-80.2-20,-14.8+30,39.2);
   });
   
-  var pathzwords93x = new THREE.Mesh();
-  const pathxz91 = new FontLoader();
-  pathxz91.load("/rickfont.json", (font) => {
+  var PersisMesh = new THREE.Mesh();
+  const PersisLoader = new FontLoader();
+  PersisLoader.load("/rickfont.json", (font) => {
   const textGeometry = new TextGeometry('P e r s i s t e n c e', {
   font,
   size: 5,
@@ -209,140 +201,140 @@ function LoadFont_Soft3(softs){
   });
   //45f248
   const textMaterial = new THREE.MeshPhongMaterial({color: 0x45f248});
-  pathzwords93x.geometry =  textGeometry;
-  pathzwords93x.material = textMaterial;
-  pathzwords93x.position.set(-88.2-20,-15+30,39.2);
+  PersisMesh.geometry =  textGeometry;
+  PersisMesh.material = textMaterial;
+  PersisMesh.position.set(-88.2-20,-15+30,39.2);
   });
-  scene3.add(pathzwords93x);
+  scene3.add(PersisMesh);
 
-  var pthzwords93x = new THREE.Mesh;
-  const pthxz91 = new FontLoader();
-  pthxz91.load("/rickfont.json", (font) => {
+  var PropMesh = new THREE.Mesh;
+  const PropLoader = new FontLoader();
+  PropLoader.load("/rickfont.json", (font) => {
   const textGeometry = new TextGeometry('P r o p e r t y', {
   font,
   size: 5,
   height: 2,
   });
-  //45f248
+  
   const textMaterial = new THREE.MeshPhongMaterial({color: 0x45f248});
-  pthzwords93x.geometry =  textGeometry;
-  pthzwords93x.material = textMaterial;
-  pthzwords93x.position.set(-88.2-20,-22+30,39.2);
+  PropMesh.geometry =  textGeometry;
+  PropMesh.material = textMaterial;
+  PropMesh.position.set(-88.2-20,-22+30,39.2);
   });
-  scene3.add(pthzwords93x);
+  scene3.add(PropMesh);
 
 
-  var pa1thzwords93x = new THREE.Mesh();
-  const pathxz911 = new FontLoader();
-  pathxz911.load("/rickfont.json", (font) => {
+  var PersisMesh2 = new THREE.Mesh();
+  const PersisFont2 = new FontLoader();
+  PersisFont2.load("/rickfont.json", (font) => {
   const textGeometry = new TextGeometry('P e r s i s t e n c e', {
   font,
   size: 5.02,
   height: 2.5,
   });
   const textMaterial = new THREE.MeshPhongMaterial({color: 0x0492c2});
-  pa1thzwords93x.geometry =  textGeometry;
-  pa1thzwords93x.material = textMaterial;
-  pa1thzwords93x.position.set(-88.2-20,-15+30,39.2);
+  PersisMesh2.geometry =  textGeometry;
+  PersisMesh2.material = textMaterial;
+  PersisMesh2.position.set(-88.2-20,-15+30,39.2);
   });
-  scene3.add(pa1thzwords93x);
+  scene3.add(PersisMesh2);
   
-  var pa1thzwods93x = new THREE.Mesh();
-  const pathxz11 = new FontLoader();
-  pathxz11.load("/rickfont.json", (font) => {
+  var PropMesh2 = new THREE.Mesh();
+  const PropFont2 = new FontLoader();
+  PropFont2.load("/rickfont.json", (font) => {
   const textGeometry = new TextGeometry('P r o p e r t y', {
   font,
   size: 5.02,
   height: 2.5,
   });
   const textMaterial = new THREE.MeshPhongMaterial({color: 0x0492c2});
-  pa1thzwods93x.geometry =  textGeometry;
-  pa1thzwods93x.material = textMaterial;
-  pa1thzwods93x.position.set(-88.2-20,-22+30,39.2);
+  PropMesh2.geometry =  textGeometry;
+  PropMesh2.material = textMaterial;
+  PropMesh2.position.set(-88.2-20,-22+30,39.2);
   });
-  scene3.add(pa1thzwods93x);
+  scene3.add(PropMesh2);
 
-  var pathzwods93x = new THREE.Mesh();
-  const pathxz091 = new FontLoader();
-  pathxz091.load("/rickfont.json", (font) => {
+  var UncerMesh = new THREE.Mesh();
+  const UncerFont = new FontLoader();
+  UncerFont.load("/rickfont.json", (font) => {
   const textGeometry = new TextGeometry('U n c e r t a i n t y   P r i n c i p l e', {
   font,
   size: 5,
   height: 2,
   });
-  //45f248
+  
   const textMaterial = new THREE.MeshPhongMaterial({color: 0x45f248});
-  pathzwods93x.geometry =  textGeometry;
-  pathzwods93x.material = textMaterial;
-  pathzwods93x.position.set(-8-20,-15+30,39.2);
+  UncerMesh.geometry =  textGeometry;
+  UncerMesh.material = textMaterial;
+  UncerMesh.position.set(-8-20,-15+30,39.2);
   });
-  pathzwods93x.rotateY(-.1)
-  scene3.add(pathzwods93x);
-  //plan3.rotateX((Math.PI)/2)
-  var pa1tzwords93x = new THREE.Mesh();
-  const patxz911 = new FontLoader();
-  patxz911.load("/rickfont.json", (font) => {
+  UncerMesh.rotateY(-.1)
+  scene3.add(UncerMesh);
+  
+  var UncerMesh2 = new THREE.Mesh();
+  const UncerFont2 = new FontLoader();
+  UncerFont2.load("/rickfont.json", (font) => {
   const textGeometry = new TextGeometry('U n c e r t a i n t y   P r i n c i p l e', {
   font,
   size: 5.02,
   height: 2.5,
   });
   const textMaterial = new THREE.MeshPhongMaterial({color: 0x0492c2});
-  pa1tzwords93x.geometry =  textGeometry;
-  pa1tzwords93x.material = textMaterial;
-  pa1tzwords93x.position.set(-8-20,-15+30,39.2);
+  UncerMesh2.geometry =  textGeometry;
+  UncerMesh2.material = textMaterial;
+  UncerMesh2.position.set(-8-20,-15+30,39.2);
   });
-  pa1tzwords93x.rotateY(-.1)
-  scene3.add(pa1tzwords93x);
+  UncerMesh2.rotateY(-.1)
+  scene3.add(UncerMesh2);
   
 
 
-  var pathzwords93 = new THREE.Mesh();
-  const pathz91 = new FontLoader();
-  pathz91.load("/digital.json", (font) => {
+  var CubeMesh = new THREE.Mesh();
+  const CubeFont = new FontLoader();
+  CubeFont.load("/digital.json", (font) => {
   const textGeometry = new TextGeometry('C u b e', {
   font,
   size: 3,
   height: .3,
   });
   const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-  pathzwords93.geometry =  textGeometry;
-  pathzwords93.material = textMaterial;
-  pathzwords93.position.set(-84.2-20,15+30,39.2);
+  CubeMesh.geometry =  textGeometry;
+  CubeMesh.material = textMaterial;
+  CubeMesh.position.set(-84.2-20,15+30,39.2);
   });
-  scene3.add(pathzwords93);
+  scene3.add(CubeMesh);
   
-  var pathzwords833 = new THREE.Mesh();
-  const pathz138 = new FontLoader();
-  pathz138.load("./digital.json", (font) => {
+  var PathMesh1 = new THREE.Mesh();
+  const PathFont1 = new FontLoader();
+  PathFont1.load("./digital.json", (font) => {
   const textGeometry = new TextGeometry('P a t h', {
   font,
   size: 3,
   height: .3,
   });
   const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-  pathzwords833.geometry =  textGeometry;
-  pathzwords833.material = textMaterial;
-  pathzwords833.position.set(-84.2-20,11+30,39.2);
+  PathMesh1.geometry =  textGeometry;
+  PathMesh1.material = textMaterial;
+  PathMesh1.position.set(-84.2-20,11+30,39.2);
   });
-  scene3.add(pathzwords833);
+  scene3.add(PathMesh1);
 
 
 
-  var pathzwords3 = new THREE.Mesh();
-  const pathz1 = new FontLoader();
-  pathz1.load("/digital.json", (font) => {
+  var DiamMesh1 = new THREE.Mesh();
+  const DiamFont1 = new FontLoader();
+  DiamFont1.load("/digital.json", (font) => {
   const textGeometry = new TextGeometry('D i a m o n d', {
   font,
   size: 3,
   height: .3,
   });
   const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-  pathzwords3.geometry =  textGeometry;
-  pathzwords3.material = textMaterial;
-  pathzwords3.position.set(-70-20,4+30,39.2);
+  DiamMesh1.geometry =  textGeometry;
+  DiamMesh1.material = textMaterial;
+  DiamMesh1.position.set(-70-20,4+30,39.2);
   });
-  scene3.add(pathzwords3);
+  scene3.add(DiamMesh1);
   var pathzwords33 = new THREE.Mesh();
   const pathz13 = new FontLoader();
   pathz13.load("/digital.json", (font) => {
@@ -358,33 +350,33 @@ function LoadFont_Soft3(softs){
   });
   scene3.add(pathzwords33);
 
-  const eotr3 = new THREE.BoxGeometry( 10, 10,.5);
-  const atia3 = new THREE.MeshBasicMaterial( {color: 0x000000, side: THREE.DoubleSide} );
-  const pll3 = new THREE.Mesh( eotr3, atia3 );
-  pll3.position.set(-.2-20,38.2+30,40.2);
-  pll3.rotateX((Math.PI)/2)
-  scene3.add( pll3 );
+  const plainGeo = new THREE.BoxGeometry( 10, 10,.5);
+  const plainMesh = new THREE.MeshBasicMaterial( {color: 0x000000, side: THREE.DoubleSide} );
+  const plain = new THREE.Mesh( plainGeo, plainMesh );
+  plain.position.set(-.2-20,38.2+30,40.2);
+  plain.rotateX((Math.PI)/2)
+  scene3.add( plain );
 
-  const glftLoaderbj3 = new GLTFLoader();
-  glftLoaderbj3.load("/scenegold.gltf", (gltfScene) => {
+  const GoldBox1 = new GLTFLoader();
+  GoldBox1.load("/scenegold.gltf", (gltfScene) => {
   scene3.add(gltfScene.scene);
   gltfScene.scene.scale.set(25,25,26);
   gltfScene.scene.position.set(-44.2-20,-15+30,40.2);
   });
-  const glftLoaderrj3 = new GLTFLoader();
-  glftLoaderrj3.load("/scenegold.gltf", (gltfScene) => {
+  const GoldBox2 = new GLTFLoader();
+  GoldBox2.load("/scenegold.gltf", (gltfScene) => {
   scene3.add(gltfScene.scene);
   gltfScene.scene.scale.set(25,25,26);
   gltfScene.scene.position.set(-46.2-20,-15+30,40.2);
   });
-  const glftLoaderbkxj3 = new GLTFLoader();
-  glftLoaderbkxj3.load("/sceneblack.gltf", (gltfScene) => {
+  const BlackBox1 = new GLTFLoader();
+  BlackBox1.load("/sceneblack.gltf", (gltfScene) => {
   scene3.add(gltfScene.scene);
   gltfScene.scene.scale.set(25,25,26);
   gltfScene.scene.position.set(-45.2-20,-14.8+30,41.2);
   });
-  const glftLoaderrpxj3 = new GLTFLoader();
-  glftLoaderrpxj3.load("/sceneblack.gltf", (gltfScene) => {
+  const BlackBox2 = new GLTFLoader();
+  BlackBox2.load("/sceneblack.gltf", (gltfScene) => {
   scene3.add(gltfScene.scene);
   gltfScene.scene.scale.set(25,25,26);
   gltfScene.scene.position.set(-45.2-20,-14.8+30,39.2);
@@ -392,563 +384,563 @@ function LoadFont_Soft3(softs){
 
 
 
-var pathzwords793 = new THREE.Mesh();
-const pathz791 = new FontLoader();
-pathz791.load("/digital.json", (font) => {
+var CubeMesh = new THREE.Mesh();
+const CubeFont2 = new FontLoader();
+CubeFont2.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('C u b e', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pathzwords793.geometry =  textGeometry;
-pathzwords793.material = textMaterial;
-pathzwords793.position.set(-49.2-20,15+30,39.2);
+CubeMesh.geometry =  textGeometry;
+CubeMesh.material = textMaterial;
+CubeMesh.position.set(-49.2-20,15+30,39.2);
 });
-scene3.add(pathzwords793);
+scene3.add(CubeMesh);
 
-var pahzwords833 = new THREE.Mesh();
-const pwathz138 = new FontLoader();
-pwathz138.load("/digital.json", (font) => {
+var PathMesh11 = new THREE.Mesh();
+const PathFont = new FontLoader();
+PathFont.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('P a t h', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pahzwords833.geometry =  textGeometry;
-pahzwords833.material = textMaterial;
-pahzwords833.position.set(-49.2-20,11+30,39.2);
+PathMesh11.geometry =  textGeometry;
+PathMesh11.material = textMaterial;
+PathMesh11.position.set(-49.2-20,11+30,39.2);
 });
-scene3.add(pahzwords833);
+scene3.add(PathMesh11);
 
 
-var pathzwordsh3 = new THREE.Mesh();
-const pathz11 = new FontLoader();
-pathz11.load("/digital.json", (font) => {
+var DiamMesh4 = new THREE.Mesh();
+const DiamFont = new FontLoader();
+DiamFont.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('D i a m o n d', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pathzwordsh3.geometry =  textGeometry;
-pathzwordsh3.material = textMaterial;
-pathzwordsh3.position.set(-35-20,4+30,39.2);
+DiamMesh4.geometry =  textGeometry;
+DiamMesh4.material = textMaterial;
+DiamMesh4.position.set(-35-20,4+30,39.2);
 });
-scene3.add(pathzwordsh3);
+scene3.add(DiamMesh4);
 
-var pathzwoprds33 = new THREE.Mesh();
-const pathzp13 = new FontLoader();
-pathzp13.load("/digital.json", (font) => {
+var PathMesh11 = new THREE.Mesh();
+const PathFont2 = new FontLoader();
+PathFont2.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('  P a t h', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pathzwoprds33.geometry =  textGeometry;
-pathzwoprds33.material = textMaterial;
-pathzwoprds33.position.set(-35-20,0+30,39.2);
+PathMesh11.geometry =  textGeometry;
+PathMesh11.material = textMaterial;
+PathMesh11.position.set(-35-20,0+30,39.2);
 });
-scene3.add(pathzwoprds33);
+scene3.add(PathMesh11);
 
 
 
 
-const glftLoaderb3 = new GLTFLoader();
-glftLoaderb3.load("/scenered.gltf", (gltfScene) => {
+const RedBox = new GLTFLoader();
+RedBox.load("/scenered.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(0.8-20,-15+30,40.2);
 });
-const glftLoaderr3 = new GLTFLoader();
-glftLoaderr3.load("/scenered.gltf", (gltfScene) => {
+const RedBox2 = new GLTFLoader();
+RedBox2.load("/scenered.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(-1.2-20,-15+30,40.2);
 });
-const glftLoaderbkx3 = new GLTFLoader();
-glftLoaderbkx3.load("/sceneblue.gltf", (gltfScene) => {
+const BlueBox = new GLTFLoader();
+BlueBox.load("/sceneblue.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(-0.2-20,-14.8+30,41.2);
 });
-const glftLoaderrpx3 = new GLTFLoader();
-glftLoaderrpx3.load("/sceneblue.gltf", (gltfScene) => {
+const BlueBox2 = new GLTFLoader();
+BlueBox2.load("/sceneblue.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(-0.2-20,-14.8+30,39.2);
 });
 
-const glftLoaderbp3 = new GLTFLoader();
-glftLoaderbp3.load("/scenegold.gltf", (gltfScene) => {
+const GoldBox3 = new GLTFLoader();
+GoldBox3.load("/scenegold.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(30.8-20,-15+30,40.2);
 });
-const glftLoaderrp3 = new GLTFLoader();
-glftLoaderrp3.load("/scenegold.gltf", (gltfScene) => {
+const GoldBox4 = new GLTFLoader();
+GoldBox4.load("/scenegold.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(28.8-20,-15+30,40.2);
 });
-const glftLoaderbkxp3 = new GLTFLoader();
-glftLoaderbkxp3.load("/sceneblack.gltf", (gltfScene) => {
+const BlackBox3 = new GLTFLoader();
+BlackBox3.load("/sceneblack.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(29.8-20,-14.8+30,41.2);
 });
-const glftLoaderrpxp3 = new GLTFLoader();
-glftLoaderrpxp3.load("/sceneblack.gltf", (gltfScene) => {
+const BlackBox4 = new GLTFLoader();
+BlackBox4.load("/sceneblack.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(29.8-20,-14.8+30,39.2);
 });
 
 
-var apathzwords3 = new THREE.Mesh();
-const paathz1 = new FontLoader();
-paathz1.load("/digital.json", (font) => {
+var DiamMesh2 = new THREE.Mesh();
+const DiamFont2 = new FontLoader();
+DiamFont2.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('D i a m o n d', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-apathzwords3.geometry =  textGeometry;
-apathzwords3.material = textMaterial;
-apathzwords3.position.set(40-20,4+30,39.2);
+DiamMesh2.geometry =  textGeometry;
+DiamMesh2.material = textMaterial;
+DiamMesh2.position.set(40-20,4+30,39.2);
 });
-scene3.add(apathzwords3);
-var bpathzwords33 = new THREE.Mesh();
-const pabthz13 = new FontLoader();
-pabthz13.load("/digital.json", (font) => {
+scene3.add(DiamMesh2);
+var PathMesh9 = new THREE.Mesh();
+const PathFont3 = new FontLoader();
+PathFont3.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('  P a t h', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-bpathzwords33.geometry =  textGeometry;
-bpathzwords33.material = textMaterial;
-bpathzwords33.position.set(40-20,0+30,39.2);
+PathMesh9.geometry =  textGeometry;
+PathMesh9.material = textMaterial;
+PathMesh9.position.set(40-20,0+30,39.2);
 });
-scene3.add(bpathzwords33);
+scene3.add(PathMesh9);
 
 
-var apathzwords13 = new THREE.Mesh();
-const paathz11 = new FontLoader();
-paathz11.load("/digital.json", (font) => {
+var RedMesh = new THREE.Mesh();
+const RedFont = new FontLoader();
+RedFont.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('R e d', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-apathzwords13.geometry =  textGeometry;
-apathzwords13.material = textMaterial;
-apathzwords13.position.set(9-20,4+30,39.2);
+RedMesh.geometry =  textGeometry;
+RedMesh.material = textMaterial;
+RedMesh.position.set(9-20,4+30,39.2);
 });
-scene3.add(apathzwords13);
-var b1pathzwords33 = new THREE.Mesh();
-const pa1bthz13 = new FontLoader();
-pa1bthz13.load("/digital.json", (font) => {
+scene3.add(RedMesh);
+var PathMesh4 = new THREE.Mesh();
+const PathFont4 = new FontLoader();
+PathFont4.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('  P a t h', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-b1pathzwords33.geometry =  textGeometry;
-b1pathzwords33.material = textMaterial;
-b1pathzwords33.position.set(7-20,0+30,39.2);
+PathMesh4.geometry =  textGeometry;
+PathMesh4.material = textMaterial;
+PathMesh4.position.set(7-20,0+30,39.2);
 });
-scene3.add(b1pathzwords33);
+scene3.add(PathMesh4);
 
 
 
 
 
-var apathzwods13 = new THREE.Mesh();
-const paatz11 = new FontLoader();
-paatz11.load("/digital.json", (font) => {
+var RedMesh2 = new THREE.Mesh();
+const RedFont2 = new FontLoader();
+RedFont2.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('R e d', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-apathzwods13.geometry =  textGeometry;
-apathzwods13.material = textMaterial;
-apathzwods13.position.set(84-20,4+30,39.2);
+RedMesh2.geometry =  textGeometry;
+RedMesh2.material = textMaterial;
+RedMesh2.position.set(84-20,4+30,39.2);
 });
-scene3.add(apathzwods13);
-var b1pathzwods33 = new THREE.Mesh();
-const pa1btz13 = new FontLoader();
-pa1btz13.load("/digital.json", (font) => {
+scene3.add(RedMesh2);
+var PathMesh5 = new THREE.Mesh();
+const PathFont5 = new FontLoader();
+PathFont5.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('  P a t h', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-b1pathzwods33.geometry =  textGeometry;
-b1pathzwods33.material = textMaterial;
-b1pathzwods33.position.set(82-20,0+30,39.2);
+PathMesh5.geometry =  textGeometry;
+PathMesh5.material = textMaterial;
+PathMesh5.position.set(82-20,0+30,39.2);
 });
-scene3.add(b1pathzwods33);
+scene3.add(PathMesh5);
 
 
 
-var pathzwods7893 = new THREE.Mesh();
-const pathzz791 = new FontLoader();
-pathzz791.load("/digital.json", (font) => {
+var CubeMesh = new THREE.Mesh();
+const CubeFront = new FontLoader();
+CubeFront.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('C u b e', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pathzwods7893.geometry =  textGeometry;
-pathzwods7893.material = textMaterial;
-pathzwods7893.position.set(25.8-20,15+30,39.2);
+CubeMesh.geometry =  textGeometry;
+CubeMesh.material = textMaterial;
+CubeMesh.position.set(25.8-20,15+30,39.2);
 });
-scene3.add(pathzwods7893);
+scene3.add(CubeMesh);
 
-var pahzwrds0833 = new THREE.Mesh();
-const pwgathz138 = new FontLoader();
-pwgathz138.load("/digital.json", (font) => {
+var PathMesh7 = new THREE.Mesh();
+const PathFont6 = new FontLoader();
+PathFont6.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('P a t h', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pahzwrds0833.geometry =  textGeometry;
-pahzwrds0833.material = textMaterial;
-pahzwrds0833.position.set(25.8-20,11+30,39.2);
+PathMesh7.geometry =  textGeometry;
+PathMesh7.material = textMaterial;
+PathMesh7.position.set(25.8-20,11+30,39.2);
 });
-scene3.add(pahzwrds0833);
+scene3.add(PathMesh7);
 
 
-var pathzwods793 = new THREE.Mesh();
-const pathzz7901 = new FontLoader();
-pathzz7901.load("/digital.json", (font) => {
+var BlueMesh = new THREE.Mesh();
+const BlueFont = new FontLoader();
+BlueFont.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('B l u e', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pathzwods793.geometry =  textGeometry;
-pathzwods793.material = textMaterial;
-pathzwods793.position.set(65.8-20,15+30,39.2);
+BlueMesh.geometry =  textGeometry;
+BlueMesh.material = textMaterial;
+BlueMesh.position.set(65.8-20,15+30,39.2);
 });
-scene3.add(pathzwods793);
+scene3.add(BlueMesh);
 
-var pahzwrds8330 = new THREE.Mesh();
-const pwgathz1038 = new FontLoader();
-pwgathz1038.load("/digital.json", (font) => {
+var PathMesh7 = new THREE.Mesh();
+const PathFont7 = new FontLoader();
+PathFont7.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('P a t h', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pahzwrds8330.geometry =  textGeometry;
-pahzwrds8330.material = textMaterial;
-pahzwrds8330.position.set(65.8-20,11+30,39.2);
+PathMesh7.geometry =  textGeometry;
+PathMesh7.material = textMaterial;
+PathMesh7.position.set(65.8-20,11+30,39.2);
 });
-scene3.add(pahzwrds8330);
+scene3.add(PathMesh7);
 
 
-const geotry3 = new THREE.BoxGeometry( 10.2, 10, 1);
-const matial3 = new THREE.MeshBasicMaterial( {color: 0x8b0000, side: THREE.DoubleSide} );
-const pla3 = new THREE.Mesh( geotry3, matial3 );
-pla3.position.set(-.2-20,8+30,40.2);
-pla3.rotateX((Math.PI)/2)
-scene3.add( pla3 );
+const CoverGeo = new THREE.BoxGeometry( 10.2, 10, 1);
+const CoverMaterial = new THREE.MeshBasicMaterial( {color: 0x8b0000, side: THREE.DoubleSide} );
+const Cover = new THREE.Mesh( CoverGeo, CoverMaterial );
+Cover.position.set(-.2-20,8+30,40.2);
+Cover.rotateX((Math.PI)/2)
+scene3.add( Cover );
 
-const geotr9y3 = new THREE.BoxGeometry( 10.2, 10, 1);
-const matia9l3 = new THREE.MeshBasicMaterial( {color: 0x000000, side: THREE.DoubleSide} );
-const pl9a3 = new THREE.Mesh( geotr9y3, matia9l3 );
-pl9a3.position.set(-45.2-20,8+30,40.2);
-pl9a3.rotateX((Math.PI)/2)
-scene3.add( pl9a3 );
+const CoverGeo1 = new THREE.BoxGeometry( 10.2, 10, 1);
+const CoverMaterial1 = new THREE.MeshBasicMaterial( {color: 0x000000, side: THREE.DoubleSide} );
+const Cover1 = new THREE.Mesh( CoverGeo1, CoverMaterial1 );
+Cover1.position.set(-45.2-20,8+30,40.2);
+Cover1.rotateX((Math.PI)/2)
+scene3.add( Cover1 );
 
-const igeotr9y3 = new THREE.BoxGeometry( 10.2, 10, 1);
-const imatia9l3 = new THREE.MeshBasicMaterial( {color: 0x000000, side: THREE.DoubleSide} );
-const ipl9a3 = new THREE.Mesh( igeotr9y3, imatia9l3 );
-ipl9a3.position.set(-80.2-20,8+30,40.2);
-ipl9a3.rotateX((Math.PI)/2)
-scene3.add( ipl9a3 );
+const CoverGeo2 = new THREE.BoxGeometry( 10.2, 10, 1);
+const CoverMaterial2 = new THREE.MeshBasicMaterial( {color: 0x000000, side: THREE.DoubleSide} );
+const Cover2 = new THREE.Mesh( CoverGeo2, CoverMaterial2 );
+Cover2.position.set(-80.2-20,8+30,40.2);
+Cover2.rotateX((Math.PI)/2)
+scene3.add( Cover2 );
 
-const pigeotr9y3 = new THREE.BoxGeometry( 10.2, 10, 1);
-const pimatia9l3 = new THREE.MeshBasicMaterial( {color: 0x8b0000, side: THREE.DoubleSide} );
-const pipl9a3 = new THREE.Mesh( pigeotr9y3, pimatia9l3 );
-pipl9a3.position.set(69.8-20,8+30,40.2);
-pipl9a3.rotateX((Math.PI)/2)
-scene3.add( pipl9a3 );
+const CoverGeo3 = new THREE.BoxGeometry( 10.2, 10, 1);
+const CoverMaterial3 = new THREE.MeshBasicMaterial( {color: 0x8b0000, side: THREE.DoubleSide} );
+const Cover3 = new THREE.Mesh( CoverGeo3, CoverMaterial3 );
+Cover3.position.set(69.8-20,8+30,40.2);
+Cover3.rotateX((Math.PI)/2)
+scene3.add( Cover3 );
 
-const hpigeotr9y3 = new THREE.BoxGeometry( 10.2, 10, 1);
-const hpimatia9l3 = new THREE.MeshBasicMaterial( {color: 0x000000, side: THREE.DoubleSide} );
-const hpipl9a3 = new THREE.Mesh( hpigeotr9y3, hpimatia9l3 );
-hpipl9a3.position.set(29.8-20,8+30,40.2);
-hpipl9a3.rotateX((Math.PI)/2)
-scene3.add( hpipl9a3 );
+const CoverGeo4 = new THREE.BoxGeometry( 10.2, 10, 1);
+const CoverMaterial4 = new THREE.MeshBasicMaterial( {color: 0x000000, side: THREE.DoubleSide} );
+const Cover4 = new THREE.Mesh( CoverGeo4, CoverMaterial4 );
+Cover4.position.set(29.8-20,8+30,40.2);
+Cover4.rotateX((Math.PI)/2)
+scene3.add( Cover4 );
 
 
 
-const glftLoaderb3w = new GLTFLoader();
-glftLoaderb3w.load("/scenegold.gltf", (gltfScene) => {
+const GoldBox = new GLTFLoader();
+GoldBox.load("/scenegold.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(0.8-20,15+30,40.2);
 });
-const glftLoaderr3w = new GLTFLoader();
-glftLoaderr3w.load("/scenegold.gltf", (gltfScene) => {
+const GoldBox5 = new GLTFLoader();
+GoldBox5.load("/scenegold.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(-1.2-20,15+30,40.2);
 });
-const glftLoaderbkx3w = new GLTFLoader();
-glftLoaderbkx3w.load("/sceneblack.gltf", (gltfScene) => {
+const BlackBox5 = new GLTFLoader();
+BlackBox5.load("/sceneblack.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(-0.2-20,15.2+30,41.2);
 });
-const glftLoaderrpx3w = new GLTFLoader();
-glftLoaderrpx3w.load("/sceneblack.gltf", (gltfScene) => {
+const BlackBox6 = new GLTFLoader();
+BlackBox6.load("/sceneblack.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(-0.2-20,15.2+30,39.2);
 });
 
 
-var pathzword7931 = new THREE.Mesh();
-const pathz711 = new FontLoader();
-pathz711.load("/arrow.json", (font) => {
+var arrowMesh = new THREE.Mesh();
+const arrowFont = new FontLoader();
+arrowFont.load("/arrow.json", (font) => {
 const textGeometry = new TextGeometry('J', {
 font,
 size: 6,
 height: 3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0xfffffFF});
-pathzword7931.geometry =  textGeometry;
-pathzword7931.material = textMaterial;
-pathzword7931.position.set(-50.2-20,25.2+30,39.2);
+arrowMesh.geometry =  textGeometry;
+arrowMesh.material = textMaterial;
+arrowMesh.position.set(-50.2-20,25.2+30,39.2);
 });
-scene3.add(pathzword7931);
+scene3.add(arrowMesh);
 
 
 
 
 
 
-var pathzord7931 = new THREE.Mesh();
-const path711 = new FontLoader();
-path711.load("/pointer.json", (font) => {
+var arrowMesh2 = new THREE.Mesh();
+const arrowFont2 = new FontLoader();
+arrowFont2.load("/pointer.json", (font) => {
 const textGeometry = new TextGeometry('I', {
 font,
 size: 6,
 height: 3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0xfffffFF});
-pathzord7931.geometry =  textGeometry;
-pathzord7931.material = textMaterial;
-pathzord7931.position.set(30.2-20,38.2+30,39.2);
-pathzord7931.scale.set(1.5,1,1);
+arrowMesh2.geometry =  textGeometry;
+arrowMesh2.material = textMaterial;
+arrowMesh2.position.set(30.2-20,38.2+30,39.2);
+arrowMesh2.scale.set(1.5,1,1);
 });
-scene3.add(pathzord7931);
+scene3.add(arrowMesh2);
 
-var pa0thzord7931 = new THREE.Mesh();
-const pa0th711 = new FontLoader();
-pa0th711.load("/pointer.json", (font) => {
+var arrowMesh3 = new THREE.Mesh();
+const arrowFont3 = new FontLoader();
+arrowFont3.load("/pointer.json", (font) => {
 const textGeometry = new TextGeometry('O', {
 font,
 size: 6,
 height: 3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0xfffffFF});
-pa0thzord7931.geometry =  textGeometry;
-pa0thzord7931.material = textMaterial;
-pa0thzord7931.position.set(63.2-20,24.2+30,39.2);
-pa0thzord7931.scale.set(1,1.2,1);
+arrowMesh3.geometry =  textGeometry;
+arrowMesh3.material = textMaterial;
+arrowMesh3.position.set(63.2-20,24.2+30,39.2);
+arrowMesh3.scale.set(1,1.2,1);
 });
-scene3.add(pa0thzord7931);
+scene3.add(arrowMesh3);
 
 
-var pa0thz1ord7931 = new THREE.Mesh();
-const pa0th7111 = new FontLoader();
-pa0th7111.load("/arrow.json", (font) => {
+var arrowMesh4 = new THREE.Mesh();
+const arrowFont4 = new FontLoader();
+arrowFont4.load("/arrow.json", (font) => {
 const textGeometry = new TextGeometry('p', {
 font,
 size: 20,
 height: 3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pa0thz1ord7931.geometry =  textGeometry;
-pa0thz1ord7931.material = textMaterial;
-pa0thz1ord7931.position.set(63.2-40+40,0.8-10,39.2-35);
-pa0thz1ord7931.rotateZ(Math.PI)
-pa0thz1ord7931.scale.set(4,4,1);
+arrowMesh4.geometry =  textGeometry;
+arrowMesh4.material = textMaterial;
+arrowMesh4.position.set(63.2-40+40,0.8-10,39.2-35);
+arrowMesh4.rotateZ(Math.PI)
+arrowMesh4.scale.set(4,4,1);
 });
-scene3.add(pa0thz1ord7931);
+scene3.add(arrowMesh4);
 
 
 
 
-var p8athzword793 = new THREE.Mesh();
-const pathz871 = new FontLoader();
-pathz871.load("/digital.json", (font) => {
+var ZeroPercMesh = new THREE.Mesh();
+const ZeroPercFont = new FontLoader();
+ZeroPercFont.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('0%', {
 font,
 size: 5,
 height: 3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-p8athzword793.geometry =  textGeometry;
-p8athzword793.material = textMaterial;
-p8athzword793.position.set(-47.2-20,37.2+30,39.2);
+ZeroPercMesh.geometry =  textGeometry;
+ZeroPercMesh.material = textMaterial;
+ZeroPercMesh.position.set(-47.2-20,37.2+30,39.2);
 });
-scene3.add(p8athzword793);
+scene3.add(ZeroPercMesh);
 
-var p8atzword793 = new THREE.Mesh();
-const path871 = new FontLoader();
-path871.load("/digital.json", (font) => {
+var SplitPercMesh = new THREE.Mesh();
+const SplitPercFont = new FontLoader();
+SplitPercFont.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('50% 50%', {
 font,
 size: 5,
 height: 3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-p8atzword793.geometry =  textGeometry;
-p8atzword793.material = textMaterial;
-p8atzword793.position.set(50.2-20,38.2+30,39.2);
+SplitPercMesh.geometry =  textGeometry;
+SplitPercMesh.material = textMaterial;
+SplitPercMesh.position.set(50.2-20,38.2+30,39.2);
 });
-scene3.add(p8atzword793);
+scene3.add(SplitPercMesh);
 
-var pathzword793 = new THREE.Mesh();
-const pathz71 = new FontLoader();
-pathz71.load("/digital.json", (font) => {
+var CubeMesh = new THREE.Mesh();
+const CubeFont3 = new FontLoader();
+CubeFont3.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('C u b e', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pathzword793.geometry =  textGeometry;
-pathzword793.material = textMaterial;
-pathzword793.position.set(-4.2-20,44.2+30,39.2);
+CubeMesh.geometry =  textGeometry;
+CubeMesh.material = textMaterial;
+CubeMesh.position.set(-4.2-20,44.2+30,39.2);
 });
-scene3.add(pathzword793);
+scene3.add(CubeMesh);
 
-var pahzwods833 = new THREE.Mesh();
-const pwatz138 = new FontLoader();
-pwatz138.load("/digital.json", (font) => {
+var PathMesh11 = new THREE.Mesh();
+const PathFont11 = new FontLoader();
+PathFont11.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('P a t h', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pahzwods833.geometry =  textGeometry;
-pahzwods833.material = textMaterial;
-pahzwods833.position.set(-4.2-20,40.2+30,39.2);
+PathMesh11.geometry =  textGeometry;
+PathMesh11.material = textMaterial;
+PathMesh11.position.set(-4.2-20,40.2+30,39.2);
 });
-scene3.add(pahzwods833);
+scene3.add(PathMesh11);
 
 
-var pathzwor793 = new THREE.Mesh();
-const patz71 = new FontLoader();
-patz71.load("/digital.json", (font) => {
+var BlueMesh2 = new THREE.Mesh();
+const BlueFont2 = new FontLoader();
+BlueFont2.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('B l u e', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pathzwor793.geometry =  textGeometry;
-pathzwor793.material = textMaterial;
-pathzwor793.position.set(-4.2-20,15.2+30,39.2);
+BlueMesh2.geometry =  textGeometry;
+BlueMesh2.material = textMaterial;
+BlueMesh2.position.set(-4.2-20,15.2+30,39.2);
 });
-scene3.add(pathzwor793);
+scene3.add(BlueMesh2);
 
-var pahzwos833 = new THREE.Mesh();
-const paatz138 = new FontLoader();
-paatz138.load("/digital.json", (font) => {
+var PathMesh9 = new THREE.Mesh();
+const PathFont9 = new FontLoader();
+PathFont9.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('P a t h', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pahzwos833.geometry =  textGeometry;
-pahzwos833.material = textMaterial;
-pahzwos833.position.set(-4.2-20,11.2+30,39.2);
+PathMesh9.geometry =  textGeometry;
+PathMesh9.material = textMaterial;
+PathMesh9.position.set(-4.2-20,11.2+30,39.2);
 });
-scene3.add(pahzwos833);
+scene3.add(PathMesh9);
 
 
-var pathzw0ords3 = new THREE.Mesh();
-const path0z1 = new FontLoader();
-path0z1.load("/digital.json", (font) => {
+var DiamMesh4 = new THREE.Mesh();
+const DiamFont4 = new FontLoader();
+DiamFont4.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('D i a m o n d', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pathzw0ords3.geometry =  textGeometry;
-pathzw0ords3.material = textMaterial;
-pathzw0ords3.position.set(10-20,34+30,39.2);
+DiamMesh4.geometry =  textGeometry;
+DiamMesh4.material = textMaterial;
+DiamMesh4.position.set(10-20,34+30,39.2);
 });
-scene3.add(pathzw0ords3);
+scene3.add(DiamMesh4);
 
-var pathzw1ords33 = new THREE.Mesh();
-const pathzz13 = new FontLoader();
-pathzz13.load("/digital.json", (font) => {
+var PathMesh11 = new THREE.Mesh();
+const PathFont10 = new FontLoader();
+PathFont10.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('  P a t h', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0x000000});
-pathzw1ords33.geometry =  textGeometry;
-pathzw1ords33.material = textMaterial;
-pathzw1ords33.position.set(10-20,30+30,39.2);
+PathMesh11.geometry =  textGeometry;
+PathMesh11.material = textMaterial;
+PathMesh11.position.set(10-20,30+30,39.2);
 });
-scene3.add(pathzw1ords33);
+scene3.add(PathMesh11);
 
 
 
-const glftoaderb3w = new GLTFLoader();
-glftoaderb3w.load("/scenered.gltf", (gltfScene) => {
+const RedBox4 = new GLTFLoader();
+RedBox4.load("/scenered.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.position.set(70.8-20,-15+30,40.2);
 });
-const glftoaderr3w = new GLTFLoader();
-glftoaderr3w.load("/scenered.gltf", (gltfScene) => {
+const RedBox5 = new GLTFLoader();
+RedBox5.load("/scenered.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.position.set(68.8-20,-15+30,40.2);
 });
-const glftoaderbkx3w = new GLTFLoader();
-glftoaderbkx3w.load("/sceneblue.gltf", (gltfScene) => {
+const BlueBox4 = new GLTFLoader();
+BlueBox4.load("/sceneblue.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.position.set(69.8-20,-14.8+30,41.2);
 });
-const glftoaderrpx3w = new GLTFLoader();
-glftoaderrpx3w.load("/sceneblue.gltf", (gltfScene) => {
+const BlueBox5 = new GLTFLoader();
+BlueBox5.load("/sceneblue.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.castShadow = true
@@ -977,146 +969,146 @@ spotLight.shadow.camera.fov = 30;
 scene3.add( spotLight );
 
 
-var patzw0ords3 = new THREE.Mesh();
-const path01 = new FontLoader();
-path01.load("/digital.json", (font) => {
+var SqRedMesh = new THREE.Mesh();
+const SqRedFont = new FontLoader();
+SqRedFont.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('S Q U A R E + R E D', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-patzw0ords3.geometry =  textGeometry;
-patzw0ords3.material = textMaterial;
-patzw0ords3.position.set(-70.8-12-20,-60+30+20,40.2);
-patzw0ords3.castShadow = true;
-patzw0ords3.receiveShadow = true;
+SqRedMesh.geometry =  textGeometry;
+SqRedMesh.material = textMaterial;
+SqRedMesh.position.set(-70.8-12-20,-60+30+20,40.2);
+SqRedMesh.castShadow = true;
+SqRedMesh.receiveShadow = true;
 
 });
-scene3.add(patzw0ords3);
+scene3.add(SqRedMesh);
 
 
-var pthzw1ords33 = new THREE.Mesh();
-const patzz13 = new FontLoader();
-patzz13.load("/digital.json", (font) => {
+var ElecMesh = new THREE.Mesh();
+const ElecFont = new FontLoader();
+ElecFont.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('E L E C T R O N S', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-pthzw1ords33.geometry =  textGeometry;
-pthzw1ords33.material = textMaterial;
-pthzw1ords33.position.set(-70.8-12-20,-60+25+20,40.2);
-pthzw1ords33.castShadow = true;
-pthzw1ords33.receiveShadow = true;
+ElecMesh.geometry =  textGeometry;
+ElecMesh.material = textMaterial;
+ElecMesh.position.set(-70.8-12-20,-60+25+20,40.2);
+ElecMesh.castShadow = true;
+ElecMesh.receiveShadow = true;
 });
-scene3.add(pthzw1ords33);
+scene3.add(ElecMesh);
 
 
-var p0atzw0ord3 = new THREE.Mesh();
-const papth001 = new FontLoader();
-papth001.load("/digital.json", (font) => {
+var SqBlueMesh = new THREE.Mesh();
+const SqBlueFont = new FontLoader();
+SqBlueFont.load("/digital.json", (font) => {
 const textGeometry = new TextGeometry('S Q U A R E + B L U E', {
 font,
 size: 3,
 height: .3,
 });
 const textMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-p0atzw0ord3.geometry =  textGeometry;
-p0atzw0ord3.material = textMaterial;
-p0atzw0ord3.position.set(-70.8+25-20,-60+30+20,40.2);
-p0atzw0ord3.castShadow = true;
-p0atzw0ord3.receiveShadow = true;
+SqBlueMesh.geometry =  textGeometry;
+SqBlueMesh.material = textMaterial;
+SqBlueMesh.position.set(-70.8+25-20,-60+30+20,40.2);
+SqBlueMesh.castShadow = true;
+SqBlueMesh.receiveShadow = true;
 });
-scene3.add(p0atzw0ord3);
+scene3.add(SqBlueMesh);
 
-    //the code im copy pasting end
-    var p0thz1ords33 = new THREE.Mesh();
-    const p0atzwz13 = new FontLoader();
-    p0atzwz13.load("/digital.json", (font) => {
+    
+    var ElecMesh2 = new THREE.Mesh();
+    const ElecFont2 = new FontLoader();
+    ElecFont2.load("/digital.json", (font) => {
     const textGeometry = new TextGeometry('E L E C T R O N S', {
     font,
     size: 3,
     height: .3,
     });
     const textMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-    p0thz1ords33.geometry =  textGeometry;
-    p0thz1ords33.material = textMaterial;
-    p0thz1ords33.position.set(-70.8+25-20,-60+25+20,40.2);
-    p0thz1ords33.castShadow = true;
-    p0thz1ords33.receiveShadow = true;
+    ElecMesh2.geometry =  textGeometry;
+    ElecMesh2.material = textMaterial;
+    ElecMesh2.position.set(-70.8+25-20,-60+25+20,40.2);
+    ElecMesh2.castShadow = true;
+    ElecMesh2.receiveShadow = true;
     });
-    scene3.add(p0thz1ords33);
+    scene3.add(ElecMesh2);
 
-    var p0atzw0or3 = new THREE.Mesh();
-    const paph001 = new FontLoader();
-    paph001.load("/digital.json", (font) => {
+    var DiaRedMesh = new THREE.Mesh();
+    const DiaRedFont = new FontLoader();
+    DiaRedFont.load("/digital.json", (font) => {
     const textGeometry = new TextGeometry('D I A M O N D + R E D', {
     font,
     size: 3,
     height: .3,
     });
     const textMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-    p0atzw0or3.geometry =  textGeometry;
-    p0atzw0or3.material = textMaterial;
-    p0atzw0or3.position.set(-70.8+55-20,-60+20+20,40.2);
-    p0atzw0or3.castShadow = true;
-    p0atzw0or3.receiveShadow = true;
+    DiaRedMesh.geometry =  textGeometry;
+    DiaRedMesh.material = textMaterial;
+    DiaRedMesh.position.set(-70.8+55-20,-60+20+20,40.2);
+    DiaRedMesh.castShadow = true;
+    DiaRedMesh.receiveShadow = true;
     });
-    scene3.add(p0atzw0or3);
+    scene3.add(DiaRedMesh);
     
-    var p0thz12ords33 = new THREE.Mesh();
-    const p0atzwz213 = new FontLoader();
-    p0atzwz213.load("/digital.json", (font) => {
+    var ElecMesh4 = new THREE.Mesh();
+    const ElecFont3 = new FontLoader();
+    ElecFont3.load("/digital.json", (font) => {
     const textGeometry = new TextGeometry('E L E C T R O N S', {
     font,
     size: 3,
     height: .3,
     });
     const textMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-    p0thz12ords33.geometry =  textGeometry;
-    p0thz12ords33.material = textMaterial;
-    p0thz12ords33.position.set(-70.8+55-20,-60+15+20,40.2);
-    p0thz12ords33.castShadow = true;
-    p0thz12ords33.receiveShadow = true;
+    ElecMesh4.geometry =  textGeometry;
+    ElecMesh4.material = textMaterial;
+    ElecMesh4.position.set(-70.8+55-20,-60+15+20,40.2);
+    ElecMesh4.castShadow = true;
+    ElecMesh4.receiveShadow = true;
     });
-    scene3.add(p0thz12ords33);
+    scene3.add(ElecMesh4);
 
 
-    var p0atzw00or3 = new THREE.Mesh();
-    const paph0001 = new FontLoader();
-    paph0001.load("/digital.json", (font) => {
+    var DiaBlueMesh = new THREE.Mesh();
+    const DiaBlueFont = new FontLoader();
+    DiaBlueFont.load("/digital.json", (font) => {
     const textGeometry = new TextGeometry('D I A M O N D + B L U E', {
     font,
     size: 3,
     height: .3,
     });
     const textMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-    p0atzw00or3.geometry =  textGeometry;
-    p0atzw00or3.material = textMaterial;
-    p0atzw00or3.position.set(-70.8+55-20,-60+20-30+20,40.2);
-    p0atzw00or3.castShadow = true;
-    p0atzw00or3.receiveShadow = true;
+    DiaBlueMesh.geometry =  textGeometry;
+    DiaBlueMesh.material = textMaterial;
+    DiaBlueMesh.position.set(-70.8+55-20,-60+20-30+20,40.2);
+    DiaBlueMesh.castShadow = true;
+    DiaBlueMesh.receiveShadow = true;
     });
-    scene3.add(p0atzw00or3);
+    scene3.add(DiaBlueMesh);
     
-    var p00thz12ords33 = new THREE.Mesh();
-    const p00atzwz213 = new FontLoader();
-    p00atzwz213.load("/digital.json", (font) => {
+    var ElecMesh4 = new THREE.Mesh();
+    const ElecFont4 = new FontLoader();
+    ElecFont4.load("/digital.json", (font) => {
     const textGeometry = new TextGeometry('E L E C T R O N S', {
     font,
     size: 3,
     height: .3,
     });
     const textMaterial = new THREE.MeshPhongMaterial({color: 0xffffff});
-    p00thz12ords33.geometry =  textGeometry;
-    p00thz12ords33.material = textMaterial;
-    p00thz12ords33.position.set(-70.8+55-20,-60+15-30+20,40.2);
-    p00thz12ords33.castShadow = true;
-    p00thz12ords33.receiveShadow = true;
+    ElecMesh4.geometry =  textGeometry;
+    ElecMesh4.material = textMaterial;
+    ElecMesh4.position.set(-70.8+55-20,-60+15-30+20,40.2);
+    ElecMesh4.castShadow = true;
+    ElecMesh4.receiveShadow = true;
     });
-    scene3.add(p00thz12ords33);
+    scene3.add(ElecMesh4);
 
 
     const mirroBack1 = new Reflector(
@@ -1130,10 +1122,9 @@ scene3.add(p0atzw0ord3);
      mirroBack1.position.x = -45 -20
      mirroBack1.position.y = -70 +20
      mirroBack1.position.z = 45-20-5-3-1
-     //mirroBack1.rotateY((Math.PI)/4)
-     //scene3.add(mirroBack1)
+     
     
-     const mirroBac1k1 = new Reflector(
+     const mirroBack2 = new Reflector(
       new THREE.PlaneGeometry(65,65,1000),
       {
           color: new THREE.Color(0x7f7f7f),
@@ -1141,142 +1132,144 @@ scene3.add(p0atzw0ord3);
           textureHeight: window.innerHeight * window.devicePixelRatio
       }
      )
-     mirroBac1k1.position.x = -45-10-10
-     mirroBac1k1.position.y = -70-10 +20
-     mirroBac1k1.position.z = 45-5-3-1-2-1
-     mirroBac1k1.rotateY(-(Math.PI)/2)
-     mirroBac1k1.rotateX(-(Math.PI)/2)
-     scene3.add(mirroBac1k1)
+     mirroBack2.position.x = -45-10-10
+     mirroBack2.position.y = -70-10 +20
+     mirroBack2.position.z = 45-5-3-1-2-1
+     mirroBack2.rotateY(-(Math.PI)/2)
+     mirroBack2.rotateX(-(Math.PI)/2)
+     scene3.add(mirroBack2)
 
-     var p00thzz12ords33 = new THREE.Mesh();
-     const p00atzwzz213 = new FontLoader();
-     p00atzwzz213.load("/arcade.json", (font) => {
+     var WarnMesh1 = new THREE.Mesh();
+     const WarnFont1 = new FontLoader();
+     WarnFont1.load("/arcade.json", (font) => {
      const textGeometry = new TextGeometry('WE  COULD  NOT  BUILD  THIS', {
      font,
      size: 9,
      height: .3,
      });
      const textMaterial = new THREE.MeshPhongMaterial({color: 0x324ab2, opacity: .2});
-     p00thzz12ords33.geometry =  textGeometry;
-     p00thzz12ords33.material = textMaterial;
-     p00thzz12ords33.position.set(70.8-50-35,-40+4+20,10.2);
-     p00thzz12ords33.castShadow = true;
-     p00thzz12ords33.receiveShadow = true;
+     WarnMesh1.geometry =  textGeometry;
+     WarnMesh1.material = textMaterial;
+     WarnMesh1.position.set(70.8-50-35,-40+4+20,10.2);
+     WarnMesh1.castShadow = true;
+     WarnMesh1.receiveShadow = true;
      });
-     scene3.add(p00thzz12ords33);
+     scene3.add(WarnMesh1);
 
 
-     var p00thzz192ords33 = new THREE.Mesh();
-     const p900atzwzz213 = new FontLoader();
-     p900atzwzz213.load("/arcade.json", (font) => {
+     var WarnMesh2 = new THREE.Mesh();
+     const WarnFont2 = new FontLoader();
+     WarnFont2.load("/arcade.json", (font) => {
      const textGeometry = new TextGeometry('             DEVICE     EVEN     IF     WE', {
      font,
      size: 8,
      height: .3,
      });
      const textMaterial = new THREE.MeshPhongMaterial({color: 0x324ab2});
-     p00thzz192ords33.geometry =  textGeometry;
-     p00thzz192ords33.material = textMaterial;
-     p00thzz192ords33.position.set(70.8-90,-45-10+2+20,20.2);
-     p00thzz192ords33.castShadow = true;
-     p00thzz192ords33.receiveShadow = true;
+     WarnMesh2.geometry =  textGeometry;
+     WarnMesh2.material = textMaterial;
+     WarnMesh2.position.set(70.8-90,-45-10+2+20,20.2);
+     WarnMesh2.castShadow = true;
+     WarnMesh2.receiveShadow = true;
      });
-     scene3.add(p00thzz192ords33);
+     scene3.add(WarnMesh2);
      
-     var p00thzz192ords303 = new THREE.Mesh();
-     const p900atzwzz2103 = new FontLoader();
-     p900atzwzz2103.load("/arcade.json", (font) => {
+     var WarnMesh3 = new THREE.Mesh();
+     const WarnFont3 = new FontLoader();
+     WarnFont3.load("/arcade.json", (font) => {
      const textGeometry = new TextGeometry('WANTED  TO  WE  HAVE', {
      font,
      size: 6,
      height: .3,
      });
      const textMaterial = new THREE.MeshPhongMaterial({color: 0x324ab2});
-     p00thzz192ords303.geometry =  textGeometry;
-     p00thzz192ords303.material = textMaterial;
-     p00thzz192ords303.position.set(70.8-15-45,-50-15+20,30.2+10);
-     p00thzz192ords303.castShadow = true;
-     p00thzz192ords303.receiveShadow = true;
+     WarnMesh3.geometry =  textGeometry;
+     WarnMesh3.material = textMaterial;
+     WarnMesh3.position.set(70.8-15-45,-50-15+20,30.2+10);
+     WarnMesh3.castShadow = true;
+     WarnMesh3.receiveShadow = true;
      });
-     scene3.add(p00thzz192ords303);
+     scene3.add(WarnMesh3);
      
-     var p00thzz192ords3003 = new THREE.Mesh();
-     const p900atzwzz21003 = new FontLoader();
-     p900atzwzz21003.load("/arcade.json", (font) => {
+     var WarnMesh4 = new THREE.Mesh();
+     const WarnFont4 = new FontLoader();
+     WarnFont4.load("/arcade.json", (font) => {
      const textGeometry = new TextGeometry('TRIED  AND  FAILED', {
      font,
      size: 4,
      height: .3,
      });
      const textMaterial = new THREE.MeshPhongMaterial({color: 0x324ab2});
-     p00thzz192ords3003.geometry =  textGeometry;
-     p00thzz192ords3003.material = textMaterial;
-     p00thzz192ords3003.position.set(70.8-50,-55-17+20,40.2+15);
-     p00thzz192ords3003.castShadow = true;
-     p00thzz192ords3003.receiveShadow = true;
+     WarnMesh4.geometry =  textGeometry;
+     WarnMesh4.material = textMaterial;
+     WarnMesh4.position.set(70.8-50,-55-17+20,40.2+15);
+     WarnMesh4.castShadow = true;
+     WarnMesh4.receiveShadow = true;
      });
-     scene3.add(p00thzz192ords3003);
+     scene3.add(WarnMesh4);
      
-     var p00thzz192ords30003 = new THREE.Mesh();
-     const p900atzwzz210003 = new FontLoader();
-     p900atzwzz210003.load("/arcade.json", (font) => {
+     var WarnMesh5 = new THREE.Mesh();
+     const WarnFont5 = new FontLoader();
+     WarnFont5.load("/arcade.json", (font) => {
      const textGeometry = new TextGeometry('MISERABLY', {
      font,
      size: 3,
      height: .3,
      });
      const textMaterial = new THREE.MeshPhongMaterial({color: 0x324ab2});
-     p00thzz192ords30003.geometry =  textGeometry;
-     p00thzz192ords30003.material = textMaterial;
-     p00thzz192ords30003.position.set(70.8-43,-60-18+20,50.2+20);
-     p00thzz192ords30003.castShadow = true;
-     p00thzz192ords30003.receiveShadow = true;
+     WarnMesh5.geometry =  textGeometry;
+     WarnMesh5.material = textMaterial;
+     WarnMesh5.position.set(70.8-43,-60-18+20,50.2+20);
+     WarnMesh5.castShadow = true;
+     WarnMesh5.receiveShadow = true;
      });
-     scene3.add(p00thzz192ords30003);
+     scene3.add(WarnMesh5);
 
 
-     const glftoaerb3w = new GLTFLoader();
-     glftoaerb3w.load("/scenered.gltf", (gltfScene) => {
+     const RedBox6 = new GLTFLoader();
+     RedBox6.load("/scenered.gltf", (gltfScene) => {
      scene3.add(gltfScene.scene);
      gltfScene.scene.scale.set(25,25,26);
      gltfScene.scene.castShadow = true
      gltfScene.scene.receiveShadow = true
      gltfScene.scene.position.set(-70.8-20,-60+20,40.2);
      });
-     const glftoaerr3w = new GLTFLoader();
-     glftoaerr3w.load("/scenered.gltf", (gltfScene) => {
+     const RedBox7 = new GLTFLoader();
+     RedBox7.load("/scenered.gltf", (gltfScene) => {
      scene3.add(gltfScene.scene);
      gltfScene.scene.scale.set(25,25,26);
      gltfScene.scene.castShadow = true
      gltfScene.scene.receiveShadow = true
      gltfScene.scene.position.set(-68.8-20,-60+20,40.2);
      });
-     const gltoaderbkx3w = new GLTFLoader();
-     gltoaderbkx3w.load("/sceneblue.gltf", (gltfScene) => {
+     
+     const BlueBox7 = new GLTFLoader();
+     BlueBox7.load("/sceneblue.gltf", (gltfScene) => {
      scene3.add(gltfScene.scene);
      gltfScene.scene.scale.set(25,25,26);
      gltfScene.scene.castShadow = true
      gltfScene.scene.receiveShadow = true
      gltfScene.scene.position.set(-69.8-20,-59.8+20,41.2);
      });
-     const glfoaderrpx3w = new GLTFLoader();
-     glfoaderrpx3w.load("/sceneblue.gltf", (gltfScene) => {
+     const BlueBox8 = new GLTFLoader();
+     BlueBox8.load("/sceneblue.gltf", (gltfScene) => {
      scene3.add(gltfScene.scene);
      gltfScene.scene.scale.set(25,25,26);
      gltfScene.scene.castShadow = true
      gltfScene.scene.receiveShadow = true
      gltfScene.scene.position.set(-69.8-20,-59.8+20,39.2);
      });
-     const igetr9y3 = new THREE.BoxGeometry( 10.2, 10, 1);
-     const imaia9l3 = new THREE.MeshBasicMaterial( {color: 0x8B0000, side: THREE.DoubleSide} );
-     const ip9a3 = new THREE.Mesh( igetr9y3, imaia9l3 );
-     ip9a3.position.set(-70-20,-37+20,40);
-     ip9a3.rotateX((Math.PI)/2)
-     scene3.add( ip9a3 );
+     
+     const CoverGeo5 = new THREE.BoxGeometry( 10.2, 10, 1);
+     const CoverMaterial5 = new THREE.MeshBasicMaterial( {color: 0x8B0000, side: THREE.DoubleSide} );
+     const Cover5 = new THREE.Mesh( CoverGeo5, CoverMaterial5 );
+     Cover5.position.set(-70-20,-37+20,40);
+     Cover5.rotateX((Math.PI)/2)
+     scene3.add( Cover5 );
 
 //pipe1
-const gltoaderbkx3ww = new GLTFLoader();
-gltoaderbkx3ww.load("/pipe.glb", (gltfScene) => {
+const PipeLoader = new GLTFLoader();
+PipeLoader.load("/pipe.glb", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
@@ -1286,19 +1279,17 @@ gltfScene.scene.rotateX((Math.PI))
 gltfScene.scene.position.set(-69.8+6.5-20,-59.8+11.5+1+20,41.2+1+1+1+.5);
 });
 //pipe2
-const gtoaderbkx3ww = new GLTFLoader();
-gtoaderbkx3ww.load("/pipe.glb", (gltfScene) => {
+const PipeLoader2 = new GLTFLoader();
+PipeLoader2.load("/pipe.glb", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.scale.set(.1,.12,.1);
-//gltfScene.scene.rotateZ((Math.PI/2))
-//gltfScene.scene.rotateX((Math.PI))
 gltfScene.scene.position.set(-69.8+6.5+30+2-20,-59.8+11.5+1-20+20,41.2+1+1+1+.5-10);
 });
 
-const gltoaerbkx3ww = new GLTFLoader();
-gltoaerbkx3ww.load("./assets/3aca94e07662430ab9215aa3fbdf5475/scene.gltf", (gltfScene) => {
+const ShapeLoader = new GLTFLoader();
+ShapeLoader.load("./assets/3aca94e07662430ab9215aa3fbdf5475/scene.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(45,60,50);
 gltfScene.scene.rotateZ((Math.PI/2))
@@ -1309,84 +1300,86 @@ gltfScene.scene.position.set(-69.8+6.5-5,-37.3,41.2+1+1+1+.5-5);
 });
 
 
-const glftoaerb3w7 = new GLTFLoader();
-glftoaerb3w7.load("/scenered.gltf", (gltfScene) => {
+const RedBox8 = new GLTFLoader();
+RedBox8.load("/scenered.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(-70.8+40+2-20,-60-30+20,40.2);
 });
-const glftoaerr3w7 = new GLTFLoader();
-glftoaerr3w7.load("/scenered.gltf", (gltfScene) => {
+const RedBox9 = new GLTFLoader();
+RedBox9.load("/scenered.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.position.set(-68.8+40+3-20,-60-30+20,40.2);
 });
-const gltoaderbkx3w7 = new GLTFLoader();
-gltoaderbkx3w7.load("/sceneblue.gltf", (gltfScene) => {
+const BlueBox9 = new GLTFLoader();
+BlueBox9.load("/sceneblue.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.position.set(-69.8+40+3-20,-59.8-30+20,41.2);
 });
-const glfoaderrpx3w7 = new GLTFLoader();
-glfoaderrpx3w7.load("/sceneblue.gltf", (gltfScene) => {
+const BlueBox10 = new GLTFLoader();
+BlueBox10.load("/sceneblue.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.position.set(-69.8+40+3-20,-59.8-30+20,39.2);
 });
-const igetr9y37 = new THREE.BoxGeometry( 10.2, 10, 1);
-const imaia9l37 = new THREE.MeshBasicMaterial( {color: 0x8B0000, side: THREE.DoubleSide} );
-const ip9a37 = new THREE.Mesh( igetr9y37, imaia9l37 );
-ip9a37.position.set(-70+40+3-.35-.2-20,-37-30+20,40);
-ip9a37.rotateX((Math.PI)/2)
-scene3.add( ip9a37 );
+
+const CoverGeo8 = new THREE.BoxGeometry( 10.2, 10, 1);
+const CoverMaterial8 = new THREE.MeshBasicMaterial( {color: 0x8B0000, side: THREE.DoubleSide} );
+const Cover8 = new THREE.Mesh( CoverGeo8, CoverMaterial8 );
+Cover8.position.set(-70+40+3-.35-.2-20,-37-30+20,40);
+Cover8.rotateX((Math.PI)/2)
+scene3.add(Cover8);
 
 
-const g8lftoaerb3w7 = new GLTFLoader();
-g8lftoaerb3w7.load("/scenegold.gltf", (gltfScene) => {
+const GoldBox6 = new GLTFLoader();
+GoldBox6.load("/scenegold.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.position.set(-70.8-20,-60-30+20,40.2);
 });
-const g8lftoaerr3w7 = new GLTFLoader();
-g8lftoaerr3w7.load("/scenegold.gltf", (gltfScene) => {
+const GoldBox7 = new GLTFLoader();
+GoldBox7.load("/scenegold.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.position.set(-68.8-20,-60-30+20,40.2);
 });
-const g8ltoaderbkx3w7 = new GLTFLoader();
-g8ltoaderbkx3w7.load("/sceneblack.gltf", (gltfScene) => {
+const BlackBox7 = new GLTFLoader();
+BlackBox7.load("/sceneblack.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.position.set(-69.8-20,-59.8-30+20,41.2);
 });
-const g8lfoaderrpx3w7 = new GLTFLoader();
-g8lfoaderrpx3w7.load("/sceneblack.gltf", (gltfScene) => {
+const BlackBox8 = new GLTFLoader();
+BlackBox8.load("/sceneblack.gltf", (gltfScene) => {
 scene3.add(gltfScene.scene);
 gltfScene.scene.scale.set(25,25,26);
 gltfScene.scene.castShadow = true
 gltfScene.scene.receiveShadow = true
 gltfScene.scene.position.set(-69.8-20,-59.8-30+20,39.2);
 });
-const igetr9y375 = new THREE.BoxGeometry( 10.2, 10, 1);
-const imaia9l375 = new THREE.MeshBasicMaterial( {color: 0x000000, side: THREE.DoubleSide} );
-const ip9a375 = new THREE.Mesh( igetr9y375, imaia9l375 );
-ip9a375.position.set(-70-20,-37-30+20,40);
-ip9a375.rotateX((Math.PI)/2)
-scene3.add( ip9a375 );
+
+const CoverGeo9 = new THREE.BoxGeometry( 10.2, 10, 1);
+const CoverMaterial9 = new THREE.MeshBasicMaterial( {color: 0x000000, side: THREE.DoubleSide} );
+const Cover9 = new THREE.Mesh( CoverGeo9, CoverMaterial9 );
+Cover9.position.set(-70-20,-37-30+20,40);
+Cover9.rotateX((Math.PI)/2)
+scene3.add(Cover9);
 
 
 const hardobjects3 = []
@@ -1394,7 +1387,6 @@ const cubes3 = []
 const softobjects3 = []
 const diamonds3 = []
 function createHardElectron3() {
-  //let truthy = true;
    var x3 = Math.random();
    console.log(x3);
     var x4 = Math.random();
@@ -1764,5 +1756,3 @@ this.container.addEventListener('click', event => {
     );
   }
 }
-
-export default ExperimentOne;
