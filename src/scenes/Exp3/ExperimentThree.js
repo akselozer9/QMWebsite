@@ -139,10 +139,10 @@ class ExperimentThree extends Component {
 
     const geomtry = new THREE.BoxGeometry( 100, 100, 2);
    
-    const plan = new THREE.Mesh( geomtry, matrial );
-    plan.position.set(0,0,0)
-    plan.rotateX((Math.PI)/2)
-    scene.add( plan );
+    const plane = new THREE.Mesh( geomtry, matrial );
+    plane.position.set(0,0,0)
+    plane.rotateX((Math.PI)/2)
+    scene.add(plane);
 
     camera.position.set(-80, 80, 130)
     camera.lookAt(0,0,40)
@@ -152,15 +152,13 @@ const light = new THREE.PointLight(0xffffff);
 light.position.set(0, 0, 5);
 scene.add(light);
 
-const lightk = new THREE.DirectionalLight(0x6a0dad, 1);
-lightk.position.set(-40.5, 8, 40.5);
-scene.add(lightk);
+const light2 = new THREE.DirectionalLight(0x6a0dad, 1);
+light2.position.set(-40.5, 8, 40.5);
+scene.add(light2);
 
-// ambient light
+
 let hemiLight = new THREE.AmbientLight(0xffffff, 0.20);
 scene.add(hemiLight);
-//scene.background = new THREE.Color(0x000000);
-//Add directional light
 let dirLight = new THREE.DirectionalLight(0xffffff, .3);
 dirLight.position.set(-30, 50, -30);
 scene.add(dirLight);
@@ -176,26 +174,11 @@ const control = new OrbitControls(camera, renderer.domElement);
 // BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
 // BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
 // BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
-// BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN BLENDER OBJECTS BEGIN
+
 const loader = new GLTFLoader();
 
 //MIRROS MIRRORS MIRRORS MIRRORS MIRRORS MIRRORS MIRRORS MIRRORS MIRRORS MIRRORS MIRRORS MIRRORS MIRRORS MIRRORS MIRRORS
 const fontLoader = new FontLoader();
-
-
-
 
 
 const mirror = new Reflector(
@@ -213,7 +196,6 @@ const mirror = new Reflector(
      scene.add(mirror); 
 
 
-
      const mirror2 = new Reflector(
       new THREE.CircleGeometry(15, 1000),
       {
@@ -225,7 +207,7 @@ const mirror = new Reflector(
      mirror2.position.x = 50
      mirror2.position.y = 7
      mirror2.position.z = 50
-    mirror2.rotateY(((Math.PI)/4) + Math.PI)
+     mirror2.rotateY(((Math.PI)/4) + Math.PI)
      scene.add(mirror2)
 
 //SCORE BOARD SIGN SCORE BOARD SIGN SCORE BOARD SIGN SCORE BOARD SIGN SCORE BOARD SIGN BOARD SIGN SCORE BOARD SIGN GN SCORE BOARD SIGN
@@ -244,7 +226,7 @@ scene.add( screen );
 
 const geoscreen2 = new THREE.BoxGeometry( 9, 10,1.2);
 const materialscreen2 = new THREE.MeshBasicMaterial( {color: 0x000000, side: THREE.DoubleSide} );
-const screen2 = new THREE.Mesh( geoscreen2, materialscreen2 );
+const screen2 = new THREE.Mesh(geoscreen2, materialscreen2);
 screen2.position.set(-40,9,40)
 screen2.rotateX((Math.PI)/2)
 scene.add( screen2 );
@@ -323,14 +305,6 @@ fontLoader.load("/digital.json", (font) => {
       }
 
 
-
-
-
-      
-     
-     
-    
-    
     
       function LoadFontPercSoft2(percent){
       const fontLoaderPercSoft = new FontLoader();
@@ -371,99 +345,63 @@ perc_hard2.position.set(10,16.4,-58);
 //FRONT LEFT
 
 
-    const gglftLoaderb = new GLTFLoader();
-gglftLoaderb.load("/scenegold.gltf", (gltfScene) => {
+    const GoldBox = new GLTFLoader();
+GoldBox.load("/scenegold.gltf", (gltfScene) => {
 scene.add(gltfScene.scene);
 gltfScene.scene.scale.set(20,20,20)
 gltfScene.scene.position.set(-39.2,-9,40.2);
 });
-const gglftLoaderr = new GLTFLoader();
-gglftLoaderr.load("/scenegold.gltf", (gltfScene) => {
+const GoldBox2 = new GLTFLoader();
+GoldBox2.load("/scenegold.gltf", (gltfScene) => {
 scene.add(gltfScene.scene);
 gltfScene.scene.scale.set(20,20,20)
 gltfScene.scene.position.set(-41.2,-9,40.2);
 });
-const gglftLoaderbkx = new GLTFLoader();
-gglftLoaderbkx.load("/sceneblack.gltf", (gltfScene) => {
+const BlackBox = new GLTFLoader();
+BlackBox.load("/sceneblack.gltf", (gltfScene) => {
 scene.add(gltfScene.scene);
 gltfScene.scene.scale.set(20,20,20)
 gltfScene.scene.position.set(-40.2,-9,41.2);
 });
-const gglftLoaderrpx = new GLTFLoader();
-gglftLoaderrpx.load("/sceneblack.gltf", (gltfScene) => {
+const BlackBox2 = new GLTFLoader();
+BlackBox2.load("/sceneblack.gltf", (gltfScene) => {
 scene.add(gltfScene.scene);
 gltfScene.scene.scale.set(20,20,20)
 gltfScene.scene.position.set(-40.2,-9,39.2);
 });
 
 
-const glftLoaderb = new GLTFLoader();
-glftLoaderb.load("/scenered.gltf", (gltfScene) => {
+const RedBox = new GLTFLoader();
+RedBox.load("/scenered.gltf", (gltfScene) => {
 scene.add(gltfScene.scene);
 gltfScene.scene.scale.set(20,20,20);
 gltfScene.scene.position.set(39.2,-9,-40.2);
 });
-const glftLoaderr = new GLTFLoader();
-glftLoaderr.load("/scenered.gltf", (gltfScene) => {
+const RedBox2 = new GLTFLoader();
+RedBox2.load("/scenered.gltf", (gltfScene) => {
 scene.add(gltfScene.scene);
 gltfScene.scene.scale.set(20,20,20);
 gltfScene.scene.position.set(41.2,-9,-40.2);
 });
-const glftLoaderbkx = new GLTFLoader();
-glftLoaderbkx.load("/sceneblue.gltf", (gltfScene) => {
+const BlueBox = new GLTFLoader();
+BlueBox.load("/sceneblue.gltf", (gltfScene) => {
 scene.add(gltfScene.scene);
 gltfScene.scene.scale.set(20,20,20);
 gltfScene.scene.position.set(40.2,-9,-41.2);
 });
-const glftLoaderrpx = new GLTFLoader();
-glftLoaderrpx.load("/sceneblue.gltf", (gltfScene) => {
+const BlueBox2 = new GLTFLoader();
+BlueBox2.load("/sceneblue.gltf", (gltfScene) => {
 scene.add(gltfScene.scene);
 gltfScene.scene.scale.set(20,20,20);
 gltfScene.scene.position.set(40.2,-9,-39.2);
 });
 
-
-
 // BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
 // BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
 // BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-// BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END BLENDER OBJECTS END
-
-
-
-
-
-
-
-
-
-
 
 // ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS
 // ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS
-// ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS
-// ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS
-// ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS
-// ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS
-// ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS
-// ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS BEGIN ALL FONTS
-   
 
     const hard_path_mesh = new THREE.Mesh();
     const soft_path_mesh = new THREE.Mesh();
@@ -471,8 +409,6 @@ gltfScene.scene.position.set(40.2,-9,-39.2);
     const blue_path_mesh =new THREE.Mesh();
 
 
-
-  
       fontLoader.load("/Quantum_Regular (1).json", (font) => {
       const textGeometry = new TextGeometry("C U B E   P A T H", {
       font,
@@ -520,8 +456,7 @@ gltfScene.scene.position.set(40.2,-9,-39.2);
   soft_path_mesh.geometry =  textGeometry;
   soft_path_mesh.material = textMaterial;
   soft_path_mesh.position.set(-32,2,45);
-  soft_path_mesh.rotateX(-(Math.PI)/2)
-  //soft_path_mesh.rotateZ(Math.PI/2)
+  soft_path_mesh.rotateX(-(Math.PI)/2);
   soft_path_mesh.castShadow = true;
   soft_path_mesh.receiveShadow = true;
   scene.add(soft_path_mesh);
@@ -539,33 +474,14 @@ gltfScene.scene.position.set(40.2,-9,-39.2);
   red_path_mesh.geometry =  textGeometry;
   red_path_mesh.material = textMaterial;
   red_path_mesh.position.set(55,1,-50);
-  red_path_mesh.rotateX(-(Math.PI)/2)
-  //soft_path_mesh.rotateZ(Math.PI/2)
+  red_path_mesh.rotateX(-(Math.PI)/2);
   red_path_mesh.castShadow = true;
   red_path_mesh.receiveShadow = true;
   scene.add(red_path_mesh);
   });
 
-
-  
-  
-  
-  
-
 // ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
 // ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
-// ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
-// ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
-// ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
-// ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
-// ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
-// ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
-// ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
-// ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
-// ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
-// ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END ALL FONTS END
-
-
 
 //FUNCTIONS THAT DETERMINE ELECTRONS PATH BEGIN///////////////////////////////////////
 
@@ -574,12 +490,9 @@ function hard_percent2(hards, softs){
     return Math.trunc(((hards/sum)*100))
   }
 
-
-
   const hardobjects2 = []
   const cubes2 = []
   function createHardElectron2() {
-    //let truthy = true;
      var x = Math.random();
    let sphere12 = new THREE.Mesh(new THREE.SphereGeometry(1),
    new THREE.MeshPhongMaterial({ color: 0xff0000}))
@@ -588,7 +501,6 @@ function hard_percent2(hards, softs){
   sphere12.receiveShadow = true
   hardobjects2.push(sphere12);
   scene.add(sphere12)
-  
   
   const geometry = new THREE.BoxGeometry( 2.5, 2.5, 2.5 );
   const material = new THREE.MeshPhongMaterial( {color: 0x000000} );
@@ -600,22 +512,14 @@ function hard_percent2(hards, softs){
   cube2.visible = false;
   cubes2.push(cube2);
   
-  
-  
-  
-  
    var start = {x: -60, y: .2, z: 42 };
    var target1 = { x: -42, y: .2, z: 42 };
    var target2 = { x: -42, y: .2, z: -42 };
    var target3 = { x: 42, y: .2, z: -42 };
-  
-  
    var tar_x = { x: 43, y: .2, z: -42 };
    var target4 = { x: 200, y: .2, z: -42 };
-  
    var tar_z = { x: 42, y: .2, z: -43 };
    var target5  = { x: 42, y: .2, z: -200 };
-  
   
    const updateFunc = function (object, elapsed) {
      sphere12.position.x = object.x;
@@ -697,12 +601,10 @@ function hard_percent2(hards, softs){
    decision2 = new TWEEN.Tween(start).to(target5, 4000)
    }
   
-  
    tween1.chain(tween2).start()
    tween2.chain(tween3)
    tween3.chain(decision1)
    decision1.chain(decision2)
-  
    tween1.onUpdate(updateFunc)
    tween2.onUpdate(updateFunc)
    tween3.onUpdate(updateFunc)
@@ -710,7 +612,6 @@ function hard_percent2(hards, softs){
    decision2.onUpdate(updateFunc)
    //path_end
   }
-
 
 
 const softobjects2  = [];
@@ -728,7 +629,6 @@ cube2.receiveShadow = true;
 scene.add(cube2);
 cube2.visible = false;
 cubes2.push(cube2);
-  //let truthy = true;
   let x = Math.random()
   let y = Math.random()
   const front = Math.tan(Math.PI / 6)
@@ -748,17 +648,15 @@ cubes2.push(cube2);
     1, 4, 3, // right, bottom, back
     3, 4, 2, // back, bottom, left
   ]
-  const geometrykk2 = new THREE.PolyhedronGeometry(vertices2, faces2, 30, 0)
-   const materialkk2 = new THREE.MeshBasicMaterial({color: 0xFFD700})
-   const meshkk2 = new THREE.Mesh(geometrykk2, materialkk2)
-  meshkk2.scale.set(0.06,0.08,0.06)
-  scene.add(meshkk2)
-  meshkk2.castShadow = true;
-  meshkk2.receiveShadow = true;
-  meshkk2.visible = false;
-  diamonds2.push(meshkk2);
-
-
+  const polygeo = new THREE.PolyhedronGeometry(vertices2, faces2, 30, 0)
+   const polymaterial = new THREE.MeshBasicMaterial({color: 0xFFD700})
+   const poly = new THREE.Mesh(polygeo, polymaterial)
+  poly.scale.set(0.06,0.08,0.06)
+  scene.add(poly)
+  poly.castShadow = true;
+  poly.receiveShadow = true;
+  poly.visible = false;
+  diamonds2.push(poly);
 
 
   const sphere2 = new THREE.Mesh(
@@ -786,54 +684,41 @@ var target4 = { x: 200, y: 5, z: -42};
 var tar_z =  { x: 42, y: 5, z: -43 };
 var target5 = { x: 42, y: 5, z: -200 };
 
-
  const updateFunc = function (object, elapsed) {
 
    sphere2.position.x = object.x;
    sphere2.position.y = object.y;
    sphere2.position.z = object.z;
-
-   meshkk2.position.x = object.x;
-   meshkk2.position.y = object.y;
-   meshkk2.position.z = object.z;
-
+   poly.position.x = object.x;
+   poly.position.y = object.y;
+   poly.position.z = object.z;
    cube2.position.x = object.x;
    cube2.position.y = object.y;
    cube2.position.z = object.z;
 
    if(sphere2.position.x === -44 && sphere2.position.z === 42){
     sphere2.visible = false;
-    meshkk2.visible = false;
+    poly.visible = false;
     cube2.visible = true;
   }
-
-
   if(sphere2.position.x === 0 && sphere2.position.z === -42){
     scene.remove(sphere2);
-    scene.remove(meshkk2);
+    scene.remove(poly);
     scene.remove(cube2);
   }
-
     if(sphere2.position.z === 42 && sphere2.position.x === -42){
       sphere2.visible = false;
       cube2.visible = false;
-      meshkk2.visible = true;
+      poly.visible = true;
     }
-
-
-
    if(sphere2.position.z === -42 && sphere2.position.x === 42){
     sphere2.visible = false;
-    meshkk2.visible = true;
+    poly.visible = true;
   }
   if(sphere2.position.z === -42 && sphere2.position.x === 43 ){
     softsa2 = softsa2 + 1;
   }
-
-  if(sphere2.position.z === -42 && sphere2.position.x === 43 ){
-   //softsa2 = softsa2 + 1;
-   console.log(`softs: ${softsa2}`);
-   
+  if(sphere2.position.z === -42 && sphere2.position.x === 43 ){ 
    scene.remove(text_soft2);
     scene.remove(perc_soft2);
     scene.remove(perc_hard2);
@@ -843,21 +728,15 @@ var target5 = { x: 42, y: 5, z: -200 };
     scene.add(text_soft2);
     scene.add(perc_soft2);
     scene.add(perc_hard2);
-
     sphere2.material.color.setHex(0xff0000);
     sphere2.visible = true;
     sphere2.scale.set(2.2,2.2,2.2);
-    meshkk2.visible = false;
-
+    poly.visible = false;
   }
   if(sphere2.position.x === 42 && sphere2.position.z === -43){
     hardsa2 = hardsa2 + 1;
   }
-
-  if(sphere2.position.x === 42 && sphere2.position.z === -43){
-    // hardsa2 = hardsa2 + 1;
-   
-   console.log(`hards: ${hardsa2}`);
+ if(sphere2.position.x === 42 && sphere2.position.z === -43){
     scene.remove(text_hard2);
     scene.remove(perc_hard2);
     scene.remove(perc_soft2);
@@ -870,29 +749,25 @@ var target5 = { x: 42, y: 5, z: -200 };
     sphere2.material.color.setHex(0X00008B);
     sphere2.visible = true;
     sphere2.scale.set(2.2,2.2,2.2);
-    meshkk2.visible = false;
+    poly.visible = false;
   }
-
   if(sphere2.position.z === -200){
     scene.remove(sphere2);
-    scene.remove(meshkk2);
+    scene.remove(poly);
     scene.remove(cube2);
   }
   if(sphere2.position.x === 200){
     scene.remove(sphere2);
-    scene.remove(meshkk2);
+    scene.remove(poly);
     scene.remove(cube2);
   }
-
  }
 if(y <= 0.5){
   var tween1 = new TWEEN.Tween(start).to(dead_end1, 2000)
   var tween2 = new TWEEN.Tween(start).to(dead_end2, 2000)
   var tween3 = new TWEEN.Tween(start).to(dead_end3, 2000)
-
   tween1.chain(tween2).start()
   tween2.chain(tween3)
-
   tween1.onUpdate(updateFunc)
   tween2.onUpdate(updateFunc)
   tween3.onUpdate(updateFunc)
@@ -912,7 +787,6 @@ else{
   decision1 = new TWEEN.Tween(start).to(tar_z, 100)
  decision2 = new TWEEN.Tween(start).to(target5, 4000)
  }
-
  tween1.chain(tween2).start()
  tween2.chain(tween3)
  tween3.chain(decision1)
@@ -925,72 +799,42 @@ else{
 }
 }
 
-
-
-
-
-
-
-
-
-  //bring wall 
-const glftLoadercs = new GLTFLoader();
-glftLoadercs.load("/brick_wall.glb", (gltfScene) => {
+const brick_wall = new GLTFLoader();
+brick_wall.load("/brick_wall.glb", (gltfScene) => {
 scene.add(gltfScene.scene)
 gltfScene.scene.scale.set(5,10,20);
 gltfScene.scene.rotateY((Math.PI)/2);
 gltfScene.scene.position.set(0,-2,-35);
 });
 
-
-
-
-
-
-
-
 //FUNCTIONS THAT DETERMINE ELECTRONS PATH END///////////////////////////////////////////////
 var raycaster = new THREE.Raycaster(); 
 var clickMouse = new THREE.Vector2();  
-
 
 function intersect(pos) {
  raycaster.setFromCamera(pos, camera);
  return raycaster.intersectObjects(scene.children,true);
 }
 
-
 //click event listener to fire electrons 
 this.container.addEventListener('click', event => {
-
 
 let canvasBounds  = this.container.getBoundingClientRect();
   let x = Math.random();
   let x2 = Math.random();
 
-
   clickMouse.x = ((event.clientX-this.container.getBoundingClientRect().left) / window.innerWidth) * 2 - 1;
   clickMouse.y = -((event.clientY-this.container.getBoundingClientRect().top) / window.innerHeight) * 2 + 1;
   const found = intersect(clickMouse);
   if (found.length > 0) {
-  
-        createSoftElectron2();
-       
+        createSoftElectron2();     
   }
 })
-
-
-
-
-
-
 
     // update the scene
     const update = () => {
       TWEEN.update();
-      
-   
-    
+         
    //check_state();
      for(var i = 0; i < hardobjects2.length ; ++i){
       cubes2[i].rotation.x += 0.1;
@@ -1003,23 +847,16 @@ let canvasBounds  = this.container.getBoundingClientRect();
       renderer.render(scene, camera);
       requestAnimationFrame(update);
     };
-    update();
- 
-  
+    update(); 
   }
 
  
-  
 
   render() {
     const width = "100%";
     const height = "100%";
 
-    
-
     return (
-      
-      
       <div
         ref={(container) => {
           this.container = container;
